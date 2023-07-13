@@ -4,15 +4,14 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/banner.css">
-    <link rel="stylesheet" href="/css/recommended.css">
-    <link rel="stylesheet" href="/css/filter.css">
     <link rel="stylesheet" href="/css/filter-main.css">
-    <link rel="stylesheet" href="/css/main-html.css">
     <link rel="stylesheet" href="/css/strips.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/video.css">
     <link rel="stylesheet" href="/css/filter-sidebar.css">
+    <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
@@ -26,7 +25,7 @@
                 <div id="head-nav">
                   <ul>
                     <li class="expand">
-                      <a href="filter" id="genre-toggle">Genre</a>
+                      <a href="/filter" id="genre-toggle">Genre</a>
                       <ul style="display: none;" id="genre-list">
                         <li><a title="Action movies" href="/genre/action">Action</a></li>
                         <li><a title="Adult movies" href="/genre/adult">Adult</a></li>
@@ -62,7 +61,7 @@
                       </ul>
                     </li>
                     <li class="expand">
-                      <a href="filter" id="country-toggle">Country</a>
+                      <a href="/filter" id="country-toggle">Country</a>
                       <ul style="display: none;" id="country-list">
                         <li><a title="Argentina movies" href="/genre/argentina">Argentina</a></li>
                         <li><a title="Australia movies" href="/genre/australia">Australia</a></li>
@@ -103,10 +102,10 @@
 
                       </ul>
                     </li>
-                    <li><a href="filter">Movies</a></li>
-                    <li><a href="filter">Tv Shows</a></li>
-                    <li><a href="filter">Trending</a></li>
-                    <li><a href="filter">Top IMDB</a></li>
+                    <li><a href="/filter">Movies</a></li>
+                    <li><a href="/filter">Tv Shows</a></li>
+                    <li><a href="/filter">Trending</a></li>
+                    <li><a href="/filter">Top IMDB</a></li>
                   </ul>
                 </div>
               </div>
@@ -119,10 +118,10 @@
                         <i class="material-icons">&#xef4f;</i> Filter
                       </a> 
                       <input type="text" placeholder="Search movies..." name="keyword"> 
+                      <button id="show-search-btn" class="shown">
+                        <i class="material-icons">&#xE8B6;</i>
+                      </button>
                     </form>
-                  </div>
-                  <div id="show-search-btn" class="shown">
-                    <i class="material-icons">&#xE8B6;</i>
                   </div>
                 </div>
                 <div id="user-head">

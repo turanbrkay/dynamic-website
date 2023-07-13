@@ -1,0 +1,169 @@
+.btn-header {
+  background: 0 0;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  border-color: currentcolor;
+  color: rgb(153, 255, 241);
+  border: none;
+  width: 3rem;
+position: relative;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+/* Button */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #848484;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .5rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-viewmore {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  border: .2px solid #2a2a2a;
+  padding: 0 .8rem;
+  color: #777;
+  text-decoration: none;
+  transition: border-color .3s,background-color .3s,color .3s;
+}
+
+.btn-viewmore:hover {
+  background: #208e79;
+  border-color: #208e79;
+  color: #b6fff5;
+}
+
+.btn-viewmore .material-icons {
+  font-size: 1.1rem;
+  margin-left: .2rem;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #208e79;
+  border-color: #208e79;
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.btn-group-sm > .btn, .btn-sm {
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+.btn-group-lg > .btn, .btn-lg {
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .5rem;
+}
+[type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner, button::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+[type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+button, input {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Share Part*/
+#st-1 {
+  font-family: "Helvetica Neue", Verdana, Helvetica, Arial, sans-serif;
+  direction: ltr;
+  display: block;
+  opacity: 1;
+  text-align: center;
+  z-index: 94034;
+}
+#st-1 .st-total {
+  color: #555;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 12px;
+  margin-right: 0;
+  max-width: 80px;
+  padding: 4px 8px;
+  text-align: center;
+}
+#st-1 .st-total > span.st-shares {
+  font-size: 9px;
+  line-height: 9px;
+}
+#st-1.st-has-labels .st-btn {
+  min-width: 120px;
+}
+#st-1 .st-btn {
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 8px;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  top: 0;
+  vertical-align: top;
+  white-space: nowrap;
+  transition: transform 0.2s ease-in-out; /* share butonlarının yukarı hareket etme süresi */
+}
+#st-1 .st-btn > img {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 8px;
+  vertical-align: top;
+}
+#st-1 .st-btn > span {
+  color: #fff;
+}
+#st-1 .st-btn[data-network="facebook"] {
+  background-color: #4267B2;
+}
+#st-1 .st-btn[data-network="twitter"] {
+  background-color: #55acee;
+}
+#st-1 .st-btn[data-network="whatsapp"] {
+  background-color: #25d366;
+}
+#st-1 .st-btn[data-network="reddit"] {
+  background-color: #ff4500;
+}
+#st-1 .st-btn[data-network="messenger"] {
+  background-color: #448AFF;
+}
+#st-1 .st-btn[data-network="telegram"] {
+  background-color: #0088cc;
+}
+#st-1 .st-btn:last-child {
+  margin-right: 0;
+}
+
+.st-btn:hover {
+  transform: translateY(-5px);
+}

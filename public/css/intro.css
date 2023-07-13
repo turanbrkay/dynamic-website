@@ -1,0 +1,49 @@
+/* css file for the firstTOfirst page  */ 
+
+#intro {
+  background-image: url(../sources/img/main-background.png);
+  background-size: cover;  
+}
+
+#intro .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+#intro .wrapper .main {
+  flex-grow: 1;
+  background: linear-gradient(90deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.5) 20%,rgba(0,0,0,.93) 35%);
+  padding-left: 35%;
+  padding-top: 5%;
+  font-size: 15px;
+}
+#intro .container {
+  max-width: 1800px;
+}
+#intro .main .logo {
+  margin-bottom: 1rem; 
+}
+#intro .main .logo img {
+  height: 4rem;
+  margin-left: -.5rem;
+}
+.text-major {
+  color: #b6fff5;
+}
+#intro .main #head-search #search-wrapper form .filter-btn {
+  background: #2a2a2a;
+  color: #848484;
+}
+#intro .main #head-search #search-wrapper form button {
+  display: flex;
+  font-size: 1.5rem;
+  color: #777;
+}
+#intro .main .footer {
+  border-top: 1px solid #161616;
+}
+#intro p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
