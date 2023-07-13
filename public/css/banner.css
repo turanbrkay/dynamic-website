@@ -102,12 +102,10 @@ element {
   margin-bottom: 1rem;
   font-weight: 700;
 }
-button, input, optgroup, select, textarea {
-  margin: 0;
-  font-family: inherit;
-}
 #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta {
   font-size: 1.1rem;
+  display: flex;
+  align-items: start;
 }
 #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-desc {
   font-size: 1.2rem;
@@ -119,13 +117,11 @@ line-height: 1.5rem;
   display: flex;
 }
 #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta .quality, #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta .status {
-  background-color: rgb(0, 95, 85);
-  border-color: rgb(0, 124, 107);
-  background-image: none;
-  color: rgb(232, 230, 227);
+  background: #b6fff5;
+  color: #000;
 }
 #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta .quality {
-  margin-right: .5rem;
+  margin-right: .2rem;
 }
 #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta .quality, #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta .rating, #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta .status {
   border: 1px solid #b6fff5;
@@ -134,8 +130,7 @@ line-height: 1.5rem;
   height: 1.5rem;
   border-radius: 1rem;
   display: inline-flex;
-  align-items: center;
-  margin: 0;}
+  align-items: center;}
   #main-banner .swiper-actions .swiper-button-next::after, #main-banner .swiper-actions .swiper-button-prev::after {
 
     color: rgb(205, 201, 195);
@@ -200,9 +195,9 @@ line-height: 1.5rem;
     background-color: rgb(32, 34, 36);
     background-image: none;
     width: 2rem;
-border-radius: 0;
-height: 4px;
-margin: 0;
+  border-radius: 0;
+  height: 4px;
+  margin: 0;
   }
   .swiper-pagination-bullet {
     width: 8px;
@@ -226,55 +221,14 @@ margin: 0;
     border-style: none;
   }
  
-  .btn-group-lg > .btn, .btn-lg {
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .5rem;
-  }
-  .btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #848484;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-      border-top-color: transparent;
-      border-right-color: transparent;
-      border-bottom-color: transparent;
-      border-left-color: transparent;
-    padding: .375rem 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .5rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  }
   #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-actions > div .btn {
     color: rgb(153, 255, 241);
     text-transform: uppercase;
   }
-  .btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-  }
 
-  .btn-secondary {
-    background-color: red;
-    border-color: rgb(133, 123, 109);
-  }
-  .btn-secondary:hover {
-    color: rgb(232, 230, 227);
-    background-color: rgb(28, 30, 31);
-    border-color: rgb(126, 117, 104);
-  }
-  .btn-primary:hover {
-    color: rgb(232, 230, 227);
-    background-color: rgb(30, 134, 114);
-    border-color: rgb(35, 155, 132);
-  }
+  
+
+ 
   #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-actions > div:first-child {
     padding-right: .2rem;
   }
@@ -283,9 +237,14 @@ margin: 0;
   }
   #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta > span {
     margin-bottom: .5rem;
+    margin-right: .4rem;
   }
   #main-banner .swiper-actions .swiper-button-next, #main-banner .swiper-actions .swiper-button-prev {
     position: unset;
     margin: unset;
     font-size: 2.8rem;
+  }
+  #main-banner .swiper-wrapper .swiper-slide > div .wrap-slide .movie-info .movie-meta > span .material-icons {
+    font-size: 1.2rem;
+    margin-right: .2rem;
   }

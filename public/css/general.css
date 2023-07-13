@@ -78,3 +78,11 @@ a {
 .pt-3, .py-3 {
   padding-top: 1rem !important;
 }
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.fs-1 {
+  font-size: 1rem;
+}

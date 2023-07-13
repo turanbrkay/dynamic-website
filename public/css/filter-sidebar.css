@@ -94,10 +94,6 @@ section > .top {
   left: 0;
   top: 0;
 }
-img {
-  vertical-align: middle;
-  border-style: none;
-}
 .mini.movies .movie-item .movie-info .bottom .material-icons {
   font-size: 1rem;
   text-align: center;

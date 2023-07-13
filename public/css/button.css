@@ -39,6 +39,33 @@ justify-content: center;
   text-decoration: none;
   transition: border-color .3s,background-color .3s,color .3s;
 }
+.btn-primary {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #208e79;
+  border-color: #208e79;
+}
+.btn-primary:hover {
+  color: rgb(232, 230, 227);
+  background-color: #26a78e;
+  border-color: #28af95;
+}
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  background-color: #161616;
+}
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #252525;
+  border-color: #2a2a2a;
+}
+.btn-primary .material-icons, .btn-secondary .material-icons {
+  margin-left: .3rem;
+  font-size: 1.3rem;
+}
+
 
 .btn-viewmore:hover {
   background: #208e79;
@@ -49,11 +76,6 @@ justify-content: center;
 .btn-viewmore .material-icons {
   font-size: 1.1rem;
   margin-left: .2rem;
-}
-.btn-primary {
-  color: #fff;
-  background-color: #208e79;
-  border-color: #208e79;
 }
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
@@ -86,6 +108,11 @@ button, input, optgroup, select, textarea {
   font-family: inherit;
   font-size: inherit;
 }
+
+
+
+
+
 
 /* Share Part*/
 #st-1 {
