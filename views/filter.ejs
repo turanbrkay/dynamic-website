@@ -1,0 +1,99 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+  <div class="container">
+    <div class="aside-wrap">
+      <div class="main-content">
+        <section>
+          <div class="top mb-3"> <div class="begin"> <h2>TV Shows</h2> </div> </div>
+          <form class="movie-filters" action="filter" autocomplete="off">
+            <div> <input type="text" class="search form-control" placeholder="Search..." name="keyword" value=""> </div>
+            <div>
+              <div class="dropdown responsive">
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> 
+                  <span class="value" data-placeholder="Genre" data-label-placement="true">Genre</span>
+                  <i class="material-icons">&#xe5cf;</i>
+                 </button>
+              </div>
+            </div>  
+            <div>
+              <div class="dropdown responsive">
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Year" data-label-placement="true">Year</span><i class="material-icons">&#xe5cf;</i> </button>
+              </div>
+            </div> 
+            <div> 
+              <div class="dropdown responsive">
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Rating" data-label-placement="true">Rating</span> <i class="material-icons">&#xe5cf;</i></button>
+              </div>
+            </div>  
+            <div>
+              <div class="dropdown responsive">
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Type" data-label-placement="true">TV-Shows</span><i class="material-icons">&#xe5cf;</i> </button>
+              </div>
+            </div>  
+            <div>
+              <div class="dropdown responsive">
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> Quality <span class="value" data-label-placement="true"></span><i class="material-icons">&#xe5cf;</i> </button>
+              </div>
+            </div>  
+            <div>
+              <div class="dropdown responsive">
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Sort by" data-label-placement="true">Recently updated</span><i class="material-icons">&#xe5cf;</i> </button>
+              </div>
+            </div>  
+            <div> <button class="filter btn btn-primary"><i class="material-icons">&#xef4f;</i> Filter</button> </div>
+          </form>
+          <div class="clearfix"></div>
+          <div class="base content movies" id="filter-content">
+             <!-- CARDS -->
+            <% sortedMovieCards.forEach((movie)=> { %>
+              <div class="movie-item">
+                <div class="movie-border">
+                  
+                  <a href="/<%= movie.type %>/" data-tip="65597?/cachef208" class="tooltipstered" style="opacity: 1;"> 
+                    <div class="quality">HD</div> 
+                    <div class="movie-poster"> 
+                      <div><img class=" lazyloaded" alt="<%= movie.name %>" src="<%= movie.image %>"></div> 
+                    </div> 
+                  </a>
+                  <a href="/<%= movie.type %>" class="name"><%= movie.name %></a>
+                  <div class="movie-info"> 
+                    <div class="meta"> <span><%= movie.year %></span><span><%= movie.duration %></span> </div> 
+                    <div class="type">movie</div> 
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+                     
+          </div>
+        </section>
+      </div>
+      <div class="sidebar">
+        <section>
+          <div class="top"> <div class="begin"> <h2>Suggestions</h2> </div> </div>
+          <div class="base mini in-sidebar movies">
+            <a class="movie-item" href="/tv/on-the-buses-kwkvr"> 
+              <div class="movie-info"> 
+                <div class="top"> 
+                  <span>TV</span> 
+                  <span>?</span> 
+                </div> 
+                <div class="name">On the Buses</div> 
+                <div class="bottom"> 
+                  <span><i class="mdi mdi-star-outline"></i>7</span> 
+                  <span>SS 7</span> 
+                  <span>EP 13</span> 
+                </div> 
+              </div> 
+              <div class="movie-poster" data-tip="15497?/cachee40b"> 
+                <div><img class=" ls-is-cached lazyloaded" data-src="https://static.bunnycdn.ru/i/cache/images/a/ad/ad0274b247a3d3072da55dc553add9ed.jpg-w100" alt="On the Buses" src="https://static.bunnycdn.ru/i/cache/images/a/ad/ad0274b247a3d3072da55dc553add9ed.jpg-w100"></div> 
+              </div> 
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

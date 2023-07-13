@@ -1,0 +1,193 @@
+<%- include('partials/header.ejs') %>
+
+
+<main>
+  <div class="main">
+    
+      <div id="main-banner" class="swiper swiper-container-initialized swiper-container-horizontal" >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(&quot;https://static.bunnycdn.ru/i/cache/images/f/fd/fd48cf7569cbc9621add1dd99df0bd55.jpg&quot;);" data-swiper-slide-index="1"> 
+            <div class="container"> 
+              <div class="wrap-slide"> 
+                <div class="movie-info"> 
+                  <div class="movie-title">Fatal Seduction</div> 
+                  <div class="movie-meta"> 
+                    <span class="quality">HD</span> 
+                    <span class="rating">?</span> 
+                    <span><i class="mdi mdi-star-outline"></i> 0</span> 
+                    <span>2023</span> 
+                    <span></span> 
+                    <span class="genre"> 
+                      <a href="/genre/drama">Drama</a> 
+                      <a href="/genre/thriller">Thriller</a> 
+                    </span> 
+                  </div> 
+                  <div class="movie-desc">A married woman goes on a dangerous weekend trip away from home that sparks desire but ends tragically, making her wonder if the people close to her are telling the truth.</div> 
+                  <div class="movie-actions"> 
+                    <div> 
+                      <a href="/tv/fatal-seduction-302v9" class="btn btn-primary btn-lg">Watch Now <i class="mdi mdi-play-speed"></i></a> 
+                    </div> 
+                    <div class="dropup user-bookmark" data-id="67565"> 
+                      <button class="btn btn-lg btn-secondary" data-toggle="dropdown" data-placeholder="false" data-add="Add To List <i class=&quot;mdi mdi-star-plus&quot;></i>" data-edit="Edit List <i class=&quot;mdi mdi-star-plus&quot;></i>"> Add To List <i class="mdi mdi-star-plus"></i> </button> 
+                      <div class="dropdown-menu dropdown-menu-right folders"></div> 
+                    </div>
+                   </div> 
+                  </div> 
+                </div> 
+              </div> 
+            </div>
+          
+        </div>
+
+        <div class="swiper-actions">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+    
+      </div>
+    
+    
+    <div class="container">
+      <div class="aside-wrap">
+        <div class="main-content">
+          <section>
+            <div class="top">
+              <div class="begin">
+                <h2>Recommended</h2>
+                <div class="strips">
+                  <div class="strip-string" id="js-strip-movies" onclick="activateTab('movies')">MOVIES</div>
+                  <div class="strip-string" id="js-strip-tvShows" onclick="activateTab('shows')">TV SHOWS</div>
+                  <div class="strip-string" id="js-strip-trend" onclick="activateTab('trending')">TRENDING</div>
+                </div> 
+              </div>
+            </div>
+
+
+  
+            <div class="tab-content" data-name="movies"> 
+              <div class="base content movies js-recommended-movies" id="moviesTab">
+                  <!-- CARDS -->
+                  <% sortedMovieCards.slice(0, 14).forEach((movie) => { %>
+                  <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                  <% }) %>
+              </div>
+            </div>
+            <div class="tab-content" data-name="shows"> 
+              <div class="base content movies js-recommended-movies" id="showsTab">
+                              <!-- CARDS -->
+                <!--<% sortedSeriesCards.slice(0, 14).forEach((movie) => { %>
+                <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                <% }) %>-->
+              </div>
+            </div>
+            <div class="tab-content" data-name="trending"> 
+              <div class="base content movies js-recommended-movies" id="trendingTab">
+                              <!-- CARDS -->
+              </div>
+            </div>
+
+          
+          </section>
+  
+          <section>
+            <div class="top">
+              <div class="begin">
+                <h2>Latest Movies</h2>
+              </div>
+              <div class="end">
+                <a class="btn-viewmore" href="/movie">view more <i class="material-icons">&#xf1e1;</i></a>
+              </div>
+            </div>
+  
+            <div class="section-content"> 
+              <div class="base content movies" id="js-latest-movie">
+                <!-- CARDS -->
+                <% sortedMovieCards.slice(0, 14).forEach((movie) => { %>
+                <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                <% }) %>
+              </div>
+            </div>
+          </section>
+  
+          <section>
+            <div class="top">
+              <div class="begin">
+                <h2>Latest TV Shows</h2>
+              </div>
+              <div class="end">
+                <a class="btn-viewmore" href="/movie">view more <i class="material-icons">&#xf1e1;</i></a>
+              </div>
+            </div>
+
+           
+            <div class="section-content"> 
+              <div class="base content movies js-latest-TVShows">
+                  <!-- CARDS -->
+                  <% sortedSeriesCards.slice(0, 14).forEach((movie) => { %>
+                  <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                  <% }) %>
+              </div>
+            </div>
+            
+            
+          </section>
+  
+  
+          
+        </div>
+  
+  
+        <div class="sidebar">
+          <section>
+            <% function addHyphensBetweenWords(str) {
+              if (str.length > 1) {
+                return str.split(' ').join('-');
+              } else {
+                return str;
+              }
+            } %>
+            
+            <div class="top"> <div class="begin"> <h2>Suggestions</h2> </div> </div>
+            <div class="base mini in-sidebar movies">
+              <% sortedMovieCards.slice(0, 7).forEach((movie) => { %>
+              <% var hypenMovieName = addHyphensBetweenWords(movie.name); %>
+              <a class="movie-item" href="/<%= movie.type %>/<%= hypenMovieName %>-<%= movie.itemId %>"> 
+                <div class="movie-info"> 
+                  <div class="top"> 
+                    <span><%= movie.type.charAt(0).toUpperCase()+ movie.type.slice(1); %></span> 
+                    <span>?</span> 
+                  </div> 
+                  <div class="name"><%= movie.name %></div> 
+                  <div class="bottom"> 
+                    <span><span id="star-and-rating"><i class="material-icons">&#xe885;</i><%= movie.rating %></span> </span>
+                    <% if(movie.type === "series") { %>
+                    <span>SS <%= movie.season %></span> 
+                    <span>EP <%= movie.episode %></span> 
+                    <% } else { %>
+                    <span><%= movie.year %></span> 
+                    <span><%= movie.duration %></span> 
+                    <% } %>
+                  </div> 
+                </div> 
+                <div class="movie-poster" data-tip="15497?/cachee40b"> 
+                  <div><img class=" ls-is-cached lazyloaded"  alt="<%= movie.image %>" src="<%= movie.image %>"></div> 
+                </div> 
+              </a>
+              <% }) %>
+            </div>
+           
+          </section>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+</main>
+
+
+<%- include('partials/footer.ejs') %>
+
+  

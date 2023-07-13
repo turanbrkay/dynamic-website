@@ -1,0 +1,83 @@
+footer {
+  background: url('/sources/img/footer.jpeg');
+  background-size: cover;
+  margin-top: 5rem;
+  background-position: center;
+}
+
+footer .container {
+  max-width: 1800px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.f-top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  padding: 4rem 2rem 3rem 1rem ;
+  font-size: 15px;
+}
+
+.f-desc {
+  max-width: 600px;
+}
+
+.f-links {
+  min-width: 280px;
+  margin-left: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+.f-links div {
+  float: left;
+  width: 50%;
+}
+
+.f-links div ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.f-bottom {
+  font-size: .8rem;
+  color: #777;
+  border-top: 1px solid #161616;
+  text-align: center;
+  padding: .9rem 0;
+  line-height: .9rem;
+}
+
+.f-logo img {
+  margin-left: -1rem;
+}
+
+footer .f-top .f-links div h4 {
+  font-size: 1.3rem;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+footer .f-top .f-links ul  {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.f-links div ul li::before {
+  content: "\e5e1";
+  font-family: "Material Icons";
+  font-size: .6rem;
+  margin-right: .2rem;
+}
+
+.f-links div ul li a:hover{
+  color: #28af95;
+}

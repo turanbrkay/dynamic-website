@@ -1,0 +1,27 @@
+
+<% function addHyphensBetweenWords(str) {
+  if (str.length > 1) {
+    return str.split(' ').join('-');
+  } else {
+    return str;
+  }
+} %>
+
+  
+  <div class="movie-item">
+    <div class="movie-border">
+      <% var hypenMovieName = addHyphensBetweenWords(movie.name); %>
+      <a href="/<%= movie.type %>/<%= hypenMovieName %>-<%= movie.itemId %> " data-tip="65597?/cachef208" class="tooltipstered" style="opacity: 1;"> 
+        <div class="quality">HD</div> 
+        <div class="movie-poster"> 
+          <div><img class=" lazyloaded" alt="<%= movie.name %>" src="<%= movie.image %>"></div> 
+        </div> 
+      </a>
+      <a href="/<%= movie.type %>" class="name"><%= movie.name %></a>
+      <div class="movie-info"> 
+        <div class="meta"> <span><%= movie.year %></span><span><%= movie.duration %></span> </div> 
+        <div class="type">movie</div> 
+      </div>
+    </div>
+  </div>
+

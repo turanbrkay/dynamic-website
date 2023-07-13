@@ -1,0 +1,22 @@
+.strips {
+  display: flex;
+  cursor: pointer;
+  transition: color .4s;
+  color: #777;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+}
+
+.strips .strip-string:hover {
+  color: #28af95;
+  border-bottom: 1px solid #28af95;
+}
+.strips .strip-string {
+  margin-right: 1.2rem;
+}
+
+#js-strip-movies {
+  color: #28af95;
+  border-bottom: 1px solid #28af95;
+}

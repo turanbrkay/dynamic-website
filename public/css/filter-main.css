@@ -1,0 +1,356 @@
+::selection {
+  background-color: #004daa !important;
+  color: #e8e6e3 !important;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+.mb-3, .my-3 {
+  margin-bottom: 1rem !important;
+}
+::placeholder {
+  opacity: 0.5 !important;
+}
+.container {
+  max-width: 1800px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.content.movies {
+  margin-left: -.2rem;
+  margin-right: -.2rem;
+  margin-top: 1rem;
+}
+.main {
+  display: block;
+  flex-grow: 1;
+}
+.main-content .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top .begin h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #b6fff5;
+}
+
+main .aside-wrap {
+  display: flex;
+}
+
+/* main-content */ 
+main .main-content {
+  margin-right: 1rem;
+  width: 100%;
+  flex-grow: 1;
+}
+
+section {
+  margin-bottom: 2rem;
+  display: block;
+}
+section > .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+section > .top > .begin > h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: rgb(153, 255, 241);
+  line-height: 1.2;
+}
+
+.movie-filters {
+  margin-right: -4px;
+  margin-left: -4px;
+}
+.movie-filters > div {
+  width: 11.1111111111%;
+}
+.movie-azfilter > div, .movie-azfilter > li, .movie-filters > div, .movie-filters > li, .navigation > div, .navigation > li {
+  padding: 0 .1rem;
+  float: left;
+  margin-bottom: 5px;
+}
+.form-control::placeholder {
+  color: rgb(157, 148, 136);
+}
+
+.movie-azfilter .search, .movie-filters .search, .navigation .search {
+  border-color: rgb(126, 117, 104);
+  background-color: rgb(17, 18, 19);
+  background-image: none;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+
+}
+.movie-azfilter .page-item, .movie-azfilter .page-link, .movie-azfilter .pagination, .movie-azfilter .search, .movie-azfilter > div .btn, .movie-azfilter > li > a, .movie-filters .page-item, .movie-filters .page-link, .movie-filters .pagination, .movie-filters .search, .movie-filters > div .btn, .movie-filters > li > a, .navigation .page-item, .navigation .page-link, .navigation .pagination, .navigation .search, .navigation > div .btn, .navigation > li > a {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: .5rem !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-control {
+  color: rgb(153, 255, 241);
+  padding: .375rem 1rem;
+font-size: 1rem;
+font-weight: 400;
+width: 100%;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+button, input {
+  overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+}
+.dropdown, .dropleft, .dropright, .dropup {
+  position: relative;
+}
+[type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner, button::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+.movie-azfilter > div .btn.dropdown-toggle::after, .movie-filters > div .btn.dropdown-toggle::after, .navigation > div .btn.dropdown-toggle::after {
+  border-color: currentcolor;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+}
+.movie-azfilter > div .btn.dropdown-toggle, .movie-filters > div .btn.dropdown-toggle, .navigation > div .btn.dropdown-toggle {
+  justify-content: space-between;
+  display: inline-flex;
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.movie-azfilter > div .dropdown-toggle, .movie-azfilter > li > a, .movie-filters > div .dropdown-toggle, .movie-filters > li > a, .navigation > div .dropdown-toggle, .navigation > li > a {
+  border-color: transparent;
+  color: rgb(154, 146, 132);
+  background-color: rgb(17, 18, 19);
+  background-image: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  background: #161616;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.movie-azfilter .page-item, .movie-azfilter .page-link, .movie-azfilter .pagination, .movie-azfilter .search, .movie-azfilter > div .btn, .movie-azfilter > li > a, .movie-filters .page-item, .movie-filters .page-link, .movie-filters .pagination, .movie-filters .search, .movie-filters > div .btn, .movie-filters > li > a, .navigation .page-item, .navigation .page-link, .navigation .pagination, .navigation .search, .navigation > div .btn, .navigation > li > a {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: .5rem !important;
+  align-items: center;
+}
+.clearfix::after, .content.movies::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.base.movies .movie-item .movie-poster div {
+  position: relative;
+  padding: 67.5% 0;
+}
+.btn-primary {
+  color: rgb(232, 230, 227);
+  background-color: rgb(26, 114, 97);
+  border-color: rgb(37, 166, 141);
+}
+.movie-filters > div .filter {
+  width: 100%;
+}
+.movie-filters > div .filter .material-icons {
+  font-size: 1.2rem;
+}
+
+
+a {
+  color: rgb(163, 155, 142);
+  text-decoration-color: currentcolor;
+  background-color: transparent;
+  transition: border-color .3s,background-color .3s,color .3s;
+  text-decoration: none;
+}
+
+@media (max-width: 1399.98px) {
+.content.movies .movie-item {
+  width: 20%;
+}
+}
+element {
+  opacity: 1;
+}
+::selection {
+
+  background-color: #004daa !important;
+  color: #e8e6e3 !important;
+
+}
+.content.movies .movie-item {
+  border-radius: .5rem;
+  position: relative;
+  width: 14.2857142857%;
+  float: left;
+  padding: 0 .2rem;
+  margin-bottom: 1rem;
+  transition: background-color .3s,color .3s;
+  
+  flex-direction: column;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+.content.movies .movie-item .movie-border {
+  border-color: transparent;
+  padding: 5px;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: border .4s;
+  position: relative;
+
+}
+
+.content.movies .movie-item .movie-border .movie-folder .folder-btn, .content.movies .movie-item .movie-border .quality, .content.movies .movie-item .movie-border .remove {
+  background: #b6fff5;
+  background-color: rgb(0, 95, 85);
+  background-image: none;
+  color: rgb(231, 229, 225);
+  border-radius: .5rem;
+padding: 0 .3rem;
+display: inline-flex;
+font-weight: 700;
+align-items: center;
+cursor: pointer;
+line-height: 1.1rem;
+transition: background-color .3s;
+height: 1.2rem;
+
+}
+
+.content.movies .movie-item .movie-border .quality {
+  position: absolute;
+  z-index: 2;
+  left: 1rem;
+  top: 1rem;
+}
+
+.content.movies .movie-item .movie-border .movie-poster::after {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(0deg, rgb(26, 114, 97) 0px, rgba(26, 114, 97, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: opacity .4s;
+  background: linear-gradient(0deg,#208e79 0,rgba(32,142,121,0) 100%);
+  opacity: 0;
+  z-index: 1;
+}
+.content.movies .movie-item .movie-border .movie-poster::before {
+  color: rgb(153, 255, 241);
+  position: absolute;
+  z-index: 2;
+  font-family: "Material Icons";
+  content: "\f06a";
+  opacity: 0;
+  margin-left: -1.7rem;
+  margin-top: -1.7rem;
+  top: 50%;
+  left: 50%;
+  font-size: 3.7rem;
+  transition: opacity .4s;
+  filter: drop-shadow(1px 1px 1px #208e79);
+  
+}
+.content.movies .movie-item .movie-border .movie-poster {
+  position: relative;
+  width: 100%;
+}
+.base.movies .movie-item .movie-poster {
+  flex-shrink: 0;
+  width: 45px;
+  margin-right: 10px;
+  border-radius: .25rem;
+  overflow: hidden;
+}
+
+base.movies .movie-item .movie-poster div {
+  position: relative;
+  padding: 67.5% 0;
+}
+.base.movies .movie-item .movie-poster div img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-style: none;
+}
+.content.movies .movie-item .movie-border .movie-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content.movies .movie-item .movie-border .movie-info div:first-child span + span::before {
+  content: "-";
+  margin: 0 .1rem;
+}
+
+a:hover {
+  color: rgb(114, 223, 202);
+}
+
+.content.movies .movie-item .movie-border:hover {
+  border-color: rgb(39, 176, 150);
+  z-index: 10;
+  border: 1px solid #186d5d;
+}
+
+.content.movies .movie-item .movie-border .movie-poster::after {
+  /* Diğer stil özellikleri */
+  opacity: 0; /* Başlangıçta görünmez */
+  /* Diğer stil özellikleri */
+}
+
+.content.movies .movie-item:hover .movie-border .movie-poster::after {
+  opacity: 1; /* Hover durumunda görünür hale gelir */
+}
+.content.movies .movie-item:hover .movie-border .movie-poster::before {
+  opacity: 1; /* Hover durumunda görünür hale gelir */
+}
+
+.content.movies .movie-item .movie-border .name {
+  font-size: 1.15rem;
+  margin: .5rem 0 .4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.3rem;
+  max-height: 2.6rem;
+  overflow: hidden;
+  height: 2.6rem;
+}
+
+
+
+
+.tab-content {
+  display: flex;
+}

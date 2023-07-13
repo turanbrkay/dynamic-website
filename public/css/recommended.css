@@ -1,0 +1,28 @@
+
+
+
+/* filmlerin sıralandığı ana bölüm*/
+
+.btn-viewmore {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  border: .2px solid #2a2a2a;
+  padding: 0 .8rem;
+  color: #777;
+  text-decoration: none;
+  transition: border-color .3s,background-color .3s,color .3s;
+}
+
+.btn-viewmore:hover {
+  background: #208e79;
+  border-color: #208e79;
+  color: #b6fff5;
+}
+
+.btn-viewmore .material-icons {
+  font-size: 1.1rem;
+  margin-left: .2rem;
+}
+
