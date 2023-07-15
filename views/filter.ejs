@@ -46,23 +46,8 @@
           <div class="clearfix"></div>
           <div class="base content movies" id="filter-content">
              <!-- CARDS -->
-            <% sortedMovieCards.forEach((movie)=> { %>
-              <div class="movie-item">
-                <div class="movie-border">
-                  
-                  <a href="/<%= movie.type %>/" data-tip="65597?/cachef208" class="tooltipstered" style="opacity: 1;"> 
-                    <div class="quality">HD</div> 
-                    <div class="movie-poster"> 
-                      <div><img class=" lazyloaded" alt="<%= movie.name %>" src="<%= movie.image %>"></div> 
-                    </div> 
-                  </a>
-                  <a href="/<%= movie.type %>" class="name"><%= movie.name %></a>
-                  <div class="movie-info"> 
-                    <div class="meta"> <span><%= movie.year %></span><span><%= movie.duration %></span> </div> 
-                    <div class="type">movie</div> 
-                  </div>
-                </div>
-              </div>
+             <% sortedMovieCards.forEach((movie) => { %>
+              <%- include('partials/movie-item.ejs', { movie: movie }) %>
               <% }) %>
                      
           </div>
@@ -70,26 +55,21 @@
       </div>
       <div class="sidebar">
         <section>
+          <% function addHyphensBetweenWords(str) {
+            if (str.length > 1) {
+              return str.split(' ').join('-');
+            } else {
+              return str;
+            }
+          } %>
+          
           <div class="top"> <div class="begin"> <h2>Suggestions</h2> </div> </div>
           <div class="base mini in-sidebar movies">
-            <a class="movie-item" href="/tv/on-the-buses-kwkvr"> 
-              <div class="movie-info"> 
-                <div class="top"> 
-                  <span>TV</span> 
-                  <span>?</span> 
-                </div> 
-                <div class="name">On the Buses</div> 
-                <div class="bottom"> 
-                  <span><i class="mdi mdi-star-outline"></i>7</span> 
-                  <span>SS 7</span> 
-                  <span>EP 13</span> 
-                </div> 
-              </div> 
-              <div class="movie-poster" data-tip="15497?/cachee40b"> 
-                <div><img class=" ls-is-cached lazyloaded" data-src="https://static.bunnycdn.ru/i/cache/images/a/ad/ad0274b247a3d3072da55dc553add9ed.jpg-w100" alt="On the Buses" src="https://static.bunnycdn.ru/i/cache/images/a/ad/ad0274b247a3d3072da55dc553add9ed.jpg-w100"></div> 
-              </div> 
-            </a>
+            <% sortedMovieCards.slice(0, 10).forEach((movie) => { %>
+            <%- include('partials/sidebar-item.ejs', { movie: movie }) %>
+            <% }) %>
           </div>
+         
         </section>
       </div>
     </div>

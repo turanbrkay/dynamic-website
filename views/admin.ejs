@@ -1,0 +1,193 @@
+<link rel="stylesheet" href="/css/admin.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="wrapper">
+  <a class="movie-button mg-8" onclick="toggleMovieAddBox()" >
+    <i class="material-icons">&#xe02c;</i>
+  </a>
+  <a class="close-button" onclick="toggleSeriesAddBox()">
+    <i class="material-icons">&#xe048;</i>
+  </a>
+</div>
+
+
+<div class="movie add-box" id="movie-add" style="display: none;">
+  <div class="top">
+    <h2>Movie</h2>
+    <span onclick="toggleMovieAddBox()"><i class="material-icons">&#xe5cd;</i></span>
+  </div>
+  <form action="/admin/movie/add" method="post">
+    <span>
+      <div class="user-box mg">
+        <input type="text" name="name" required="">
+        <label>Name</label>
+      </div>
+      <div class="user-box mg">
+        <input type="text" name="director" required="">
+        <label>Director</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="production" required="">
+        <label>Production</label>
+      </div>
+    </span>
+    <span>
+      <div class="user-box mg">
+        <input type="text" name="type" required="">
+        <label>Type</label>
+      </div>
+      <div class="user-box mg">
+        <input type="text" name="country" required="">
+        <label>Country</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="genre" required="">
+        <label>Genre</label>
+      </div>
+  </span>
+  <div class="user-box">
+    <input type="text" name="poster" required="">
+    <label>PosterURL</label>
+  </div>
+  <div class="user-box">
+    <input type="text" name="banner" required="">
+    <label>BannerURL</label>
+  </div>
+  <span>
+    <div class="user-box mg">
+      <input type="text" name="rating" required="">
+      <label>Rating</label>
+    </div>
+    <div class="user-box mg">
+      <input type="text" name="duration" required="">
+      <label>Duration</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="release" required="">
+      <label>Release</label>
+    </div>
+  </span>
+  <div class="user-box">
+    <input type="text" name="actors" required="">
+    <label>Actors</label>
+  </div>
+
+    
+    <button type="submit" id="movie-submit-button">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </button>
+  </form>
+</div>
+<div class="series add-box" id="series-add" style="display: none;">
+  <div class="top">
+    <h2>Series</h2>
+    <span onclick="toggleSeriesAddBox()"><i class="material-icons">&#xe5cd;</i></span>
+  </div>
+  <form action="/admin/series/add" method="post">
+    <span>
+      <div class="user-box mg">
+        <input type="text" name="name" required="">
+        <label>Name</label>
+      </div>
+      <div class="user-box mg">
+        <input type="text" name="director" required="">
+        <label>Director</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="production" required="">
+        <label>Production</label>
+      </div>
+    </span>
+    <span>
+      <div class="user-box mg">
+        <input type="text" name="type" required="">
+        <label>Type</label>
+      </div>
+      <div class="user-box mg">
+        <input type="text" name="country" required="">
+        <label>Country</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="genre" required="">
+        <label>Genre</label>
+      </div>
+  </span>
+  <div class="user-box">
+    <input type="text" name="poster" required="">
+    <label>PosterURL</label>
+  </div>
+  <div class="user-box">
+    <input type="text" name="banner" required="">
+    <label>BannerURL</label>
+  </div>
+  <span>
+    <div class="user-box mg">
+      <input type="text" name="rating" required="">
+      <label>Rating</label>
+    </div>
+    <div class="user-box mg">
+      <input type="text" name="season" required="">
+      <label>Season</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="episode" required="">
+      <label>Episode</label>
+    </div>
+  </span>
+  <span>
+    <div class="user-box">
+      <input type="text" name="actors" required="">
+      <label>Actors</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="release" required="">
+      <label>Release</label>
+    </div>
+  </span>
+
+
+    
+    <button type="submit" id="series-submit-button">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </button>
+  </form>
+</div>
+
+<script>
+  function toggleMovieAddBox() {
+    var movieAddBox = document.getElementById("movie-add");
+    var wrapper = document.querySelector(".wrapper");
+    
+    if (movieAddBox.style.display === "block") {
+      movieAddBox.style.display = "none";
+      wrapper.style.opacity = '1';
+    } else {
+      movieAddBox.style.display = "block";
+      wrapper.style.opacity = '0.1';
+    }
+  }
+
+  function toggleSeriesAddBox() {
+    var seriesAddBox = document.getElementById("series-add");
+    var wrapper = document.querySelector(".wrapper");
+    
+    if (seriesAddBox.style.display === "block") {
+      seriesAddBox.style.display = "none";
+      wrapper.style.opacity = '1';
+    } else {
+      seriesAddBox.style.display = "block";
+      wrapper.style.opacity = '0.1';
+    }
+  }
+  
+  
+</script>
+

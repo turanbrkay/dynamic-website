@@ -1,45 +1,60 @@
+const dayDiv = document.querySelector('div[data-name="day"]');
+const weekDiv = document.querySelector('div[data-name="week"]');
+const monthDiv = document.querySelector('div[data-name="month"]');
+const moviesDiv = document.querySelector('div[data-name="movies"]');
+const tvShowsDiv = document.querySelector('div[data-name="tv shows"]');
+const trendingDiv = document.querySelector('div[data-name="trending"]');
 
-function openMovieLink(event, movieType) {
-  event.preventDefault();
-  var link = '/' + movieType + '/'+"naber";
-  window.location.href = link;
-}
+const stripsSidebar = document.querySelectorAll('.strip-sidebar');
+const stripsMain = document.querySelectorAll('.strips-main');
+// Başlangıçta hepsi none olacak şekilde ayarla
+weekDiv.style.display = 'none';
+monthDiv.style.display = 'none';
+tvShowsDiv.style.display = 'none';
+trendingDiv.style.display = 'none';
 
+stripsSidebar.forEach(strip => {
+  strip.addEventListener('click', function() {
+    // Tüm strip-string elementlerinin yazı rengini gri yap
+    stripsSidebar.forEach(strip => {
+      strip.classList.remove('active');
+    });
 
+    // Tüm div elementlerinin style.display özelliğini 'none' yap
+    const divs = [dayDiv, weekDiv, monthDiv];
+    divs.forEach(div => {
+      div.style.display = 'none';
+    });
 
+    // Tıklanan strip-string elementinin yazı rengini mavi yap
+    this.classList.add('active');
 
-
-
-/*var strips = document.querySelectorAll(".strip-string");
-var moviesButton = document.getElementById("js-strip-movies");
-var tvShowsButton = document.getElementById("js-strip-tvShows");
-var trendingButton = document.getElementById("js-strip-trend");
-
-function resetButtonStyle() {
-  strips.forEach(function(strip) {
-    strip.style.color = "#777";
-    strip.style.borderBottom = "none";
+    // Tıklanan strip-string elementine ait data-name div'inin style.display özelliğini 'block' yap
+    const selectedDiv = document.querySelector(`div[data-name="${this.textContent.toLowerCase()}"]`);
+    selectedDiv.style.display = 'block';
   });
+});
 
-}
+stripsMain.forEach(strip => {
+  strip.addEventListener('click', function() {
+    // Tüm strip-string elementlerinin yazı rengini gri yap
+    stripsMain.forEach(strip => {
+      strip.classList.remove('active');
+    });
 
-moviesButton.onclick = function() {
-  getRecomendeds(sortedMovieCards,21,".js-recomended-movies",true);
-  resetButtonStyle();
-  moviesButton.style.color = "#28af95"
-  moviesButton.style.borderBottom = "1px solid #28af95";
+    // Tüm div elementlerinin style.display özelliğini 'none' yap
+    const divs = [moviesDiv, tvShowsDiv, trendingDiv];
+    divs.forEach(div => {
+      div.style.display = 'none';
+    });
 
-};
-tvShowsButton.onclick = function() {
-  getRecomendeds(sortedSeriesCards,21,".js-recomended-movies",true);
-  resetButtonStyle();
-  tvShowsButton.style.color = "#28af95"
-  tvShowsButton.style.borderBottom = "1px solid #28af95";
+    // Tıklanan strip-string elementinin yazı rengini mavi yap
+    this.classList.add('active');
 
-};
-trendingButton.onclick = function() {
-  resetButtonStyle();
-  trendingButton.style.color = "#28af95"
-  trendingButton.style.borderBottom = "1px solid #28af95";
-};
-*/
+    // Tıklanan strip-string elementine ait data-name div'inin style.display özelliğini 'block' yap
+    const selecteddDiv = document.querySelector(`div[data-name="${this.textContent.toLowerCase()}"]`);
+    selecteddDiv.style.display = 'flex';
+  });
+});
+
+

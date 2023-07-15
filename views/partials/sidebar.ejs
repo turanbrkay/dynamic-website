@@ -1,0 +1,36 @@
+<% function addHyphensBetweenWords(str) {
+  if (str.length > 1) {
+    return str.split(' ').join('-');
+  } else {
+    return str;
+  }
+} %>
+
+
+<div class="base mini in-sidebar movies">
+  <% sortedMovieCards.slice(0, 7).forEach((movie) => { %>
+  <% var hypenMovieName = addHyphensBetweenWords(movie.name); %>
+  <a class="movie-item" href="/<%= movie.type %>/<%= hypenMovieName %>-<%= movie.itemId %>"> 
+    <div class="movie-info"> 
+      <div class="top"> 
+        <span><%= movie.type.charAt(0).toUpperCase()+ movie.type.slice(1); %></span> 
+        <span>?</span> 
+      </div> 
+      <div class="name"><%= movie.name %></div> 
+      <div class="bottom"> 
+        <span><span id="star-and-rating"><i class="material-icons">&#xe885;</i><%= movie.rating %></span> </span>
+        <% if(movie.type === "series") { %>
+        <span>SS <%= movie.season %></span> 
+        <span>EP <%= movie.episode %></span> 
+        <% } else { %>
+        <span><%= movie.year %></span> 
+        <span><%= movie.duration %></span> 
+        <% } %>
+      </div> 
+    </div> 
+    <div class="movie-poster" data-tip="15497?/cachee40b"> 
+      <div><img class=" ls-is-cached lazyloaded"  alt="<%= movie.image %>" src="<%= movie.image %>"></div> 
+    </div> 
+  </a>
+  <% }) %>
+</div>

@@ -6,7 +6,6 @@ const express = require("express"),
 
 function getMovieList(Id,movieList) {
 // itemId'ye göre filtreleme işlemi yaparak ilgili film listesini döndürün
-
 return movieList.filter(movie => movie.itemId == Id);
 }
 
@@ -19,15 +18,22 @@ router.get('/home',(req,res)=> {
 router.get('/filter',(req,res)=> {
     res.render('filter',{sortedMovieCards:sortedMovieCards}) 
 });
+router.get('/admin',(req,res)=> {
+    res.render('admin') 
+});
 router.get('/movie/:movieName',(req,res)=> {
     const itemId = req.params.movieName.split('-').pop();
     const movieInfo = getMovieList(itemId,sortedMovieCards);
-    res.render('video',{ movieInfo:movieInfo }) 
+    res.render('player',{ movieInfo:movieInfo }) 
 });
 router.get('/series/:seriesName',(req,res)=> {
     const itemId = req.params.seriesName.split('-').pop();
     const movieInfo = getMovieList(itemId,sortedSeriesCards);
-    res.render('video',{ movieInfo:movieInfo }) 
+    res.render('player',{ movieInfo:movieInfo }) 
+});
+
+router.get('/error',(req,res)=> {
+    res.render('errorPage',{sortedMovieCards:sortedMovieCards}) 
 });
 
 module.exports = router; // router variable'ını dışarıdan kullanıma izin verdik

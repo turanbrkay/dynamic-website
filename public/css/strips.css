@@ -8,15 +8,15 @@
   border-bottom: 1px solid transparent;
 }
 
-.strips .strip-string:hover {
+.strips .strip-sidebar:hover, .strips .strips-main:hover{
   color: #28af95;
   border-bottom: 1px solid #28af95;
 }
-.strips .strip-string {
+.strips .strip-sidebar, .strips .strips-main {
   margin-right: 1.2rem;
 }
 
-#js-strip-movies {
+.active {
   color: #28af95;
   border-bottom: 1px solid #28af95;
 }

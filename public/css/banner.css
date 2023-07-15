@@ -26,7 +26,7 @@ element {
   display: flex;
   width: 4.9rem;
   justify-content: space-between;
-  bottom: 0;
+  margin-right: 1rem;
 }
 .swiper-pagination {
   position: absolute;
@@ -131,16 +131,19 @@ line-height: 1.5rem;
   border-radius: 1rem;
   display: inline-flex;
   align-items: center;}
-  #main-banner .swiper-actions .swiper-button-next::after, #main-banner .swiper-actions .swiper-button-prev::after {
 
-    color: rgb(205, 201, 195);
-
-}
 #main-banner .swiper-actions .swiper-button-next::after, #main-banner .swiper-actions .swiper-button-prev::after {
   font-family: "Material Icons";
-  color: #2a2a2a;
+  color: black;
   transition: color .2s,opacity .2s;
   opacity: .7;
+  background-color: #2a2a2a;
+  margin-right: .4rem;
+  border-radius: .5rem;
+}
+#main-banner .swiper-actions .swiper-button-next:hover::after, #main-banner .swiper-actions .swiper-button-prev:hover::after {
+  background-color: #28af95;
+  opacity: 1;
 }
   #main-banner .swiper-button-prev::after {
     content: "\e5cb";
@@ -160,11 +163,6 @@ line-height: 1.5rem;
     align-items: center;
     justify-content: center;
     color: var(--swiper-navigation-color,var(--swiper-theme-color));
-  }
-  #main-banner .swiper-actions .swiper-button-next, #main-banner .swiper-actions .swiper-button-prev {
-    position: unset;
-    margin: unset;
-    font-size: 2.8rem;
   }
   .swiper-button-next::after, .swiper-button-prev::after {
     font-family: swiper-icons;

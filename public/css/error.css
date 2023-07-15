@@ -1,0 +1,34 @@
+.errors-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.container.medium {
+  max-width: 1400px;
+}
+.errors-page h2 {
+  font-size: 8rem;
+  line-height: 7rem;
+}
+.text-major {
+  color: #b6fff5;
+}
+.text-center {
+  text-align: center !important;
+}
+.errors-page h4 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.errors-page .btn-primary {
+ display: inline-block;
+}
+.errors-page .btn-primary span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errors-page .btn-primary span i{
+  margin-right: .5rem;
+}

@@ -1,0 +1,237 @@
+<%- include('partials/header.ejs') %>
+<link rel="stylesheet" href="/css/player.css">
+
+<main class="">
+  <div class="watch" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Movie" data-id="66278" data-season="1" data-ep="1">
+    <div id="wrap-player" class="no-player playable"> 
+      <div class="bg-player " style="background-image: url('https://static.bunnycdn.ru/i/cache/images/0/0d/0dd862ccdc3fad5f9bd7e5547b049340.jpg')"></div>
+      <div class="container large"> 
+        <div class="player-main"> 
+          <div id="player">
+            <div class="btn-watchnow"> <i class="material-icons">&#xe037;</i> </div> 
+          </div> 
+        </div> 
+        <div id="control-player"> 
+          <div class="control-wrap"> 
+            <div class="control auto-play" data-toggle="tooltip" title="" data-name="auto_play" data-persist="true" data-default="0" data-off="<i class='mdi mdi-circle-outline'></i> Auto Play" data-on="<i class='mdi mdi-check-circle'></i> Auto Play" data-original-title="Auto play video"><i class="mdi mdi-circle-outline"></i> Auto Play</div>
+            <div class="control auto-next" data-toggle="tooltip" title="" data-name="auto_next" data-persist="true" data-default="1" data-off="<i class='mdi mdi-circle-outline'></i> Auto Next" data-on="<i class='mdi mdi-check-circle'></i> Auto Next" data-original-title="Auto load next episode"><i class="mdi mdi-circle-outline"></i> Auto Next</div>
+            <div class="control auto-skip" data-toggle="tooltip" title="" data-name="auto_skip_intro" data-persist="true" data-default="0" data-off="<i class='mdi mdi-circle-outline'></i> Auto Skip" data-on="<i class='mdi mdi-check-circle'></i> Auto Skip" data-original-title="Auto skip intro, outro"><i class="mdi mdi-circle-outline"></i> Auto Skip</div>
+            <div class="skiptime dropdown" style="display: none" data-toggle="tooltip" data-placement="top" title="" data-original-title="Please help us by contributing time to skip the intro, outro. HOW TO: Click to an input field, then seek the video to the correct position, the time will automatic filled to the field, then submit the form. HOW IT WORKS: The system will automatic skip the video from [BEGIN] to [END]."> 
+              <div class="control" data-toggle="dropdown" data-placeholder="false"> <i class="mdi mdi-timer-outline"></i> Add skip time</div>
+              <ul class="dropdown-menu noclose"> 
+                <li> 
+                  <div class="input"> 
+                    <div class="intro block"> 
+                      <div class="line"><i></i></div> 
+                      <div class="group begin"> <label>Intro begin</label> 
+                        <input type="text" name="intro_begin" class="form-control form-control-sm" placeholder="00:00:00" autocomplete="off"> 
+                      </div> 
+                      <div class="group end"> <label>Intro end</label> 
+                        <input type="text" name="intro_end" class="form-control form-control-sm" placeholder="00:00:00" autocomplete="off"> 
+                      </div> 
+                    </div> 
+                    <div class="outro block"> 
+                      <div class="line"><i></i></div> 
+                      <div class="group begin"> <label>Outro begin</label> 
+                        <input type="text" name="outro_begin" class="form-control form-control-sm" placeholder="00:00:00" autocomplete="off"> 
+                      </div> 
+                      <div class="group end"> <label>Outro end</label> 
+                        <input type="text" name="outro_end" class="form-control form-control-sm" placeholder="00:00:00" autocomplete="off"> 
+                      </div> 
+                    </div> 
+                    <div class="submit"> 
+                      <button class="btn btn-sm mt-2 btn-primary w-100" type="button"><i class="mdi mdi-thumb-up-outline"></i> Contribute</button>
+                    </div> 
+                  </div> 
+                </li> 
+              </ul> 
+            </div> 
+            <div class="light control"><i class="mdi mdi-brightness-6"></i> <span>Light</span></div>
+            <div class="dropdown user-bookmark" data-id="66278" data-fetch="true"> 
+              <div class="control" data-toggle="dropdown" data-add="<i class=&quot;mdi mdi-bookmark&quot;></i> <span>Add bookmark</span>" data-edit="<i class=&quot;mdi mdi-book-edit&quot;></i> <span>Edit bookmark</span>" data-placeholder="false"><i class="mdi mdi-bookmark"></i> <span>Add bookmark</span>
+              </div>
+              <div class="dropdown-menu dropdown-menu-right folders"></div> 
+            </div>
+            <div class="control" data-toggle="modal" data-target="#report"><i class="mdi mdi-ladybug"></i> <span>Report</span></div> 
+          </div> 
+        </div> 
+      </div> 
+    </div>
+
+    <div class="container large z-1">
+      <div class="mt-3 mb-3 text-center sharethis-inline-share-buttons st-center st-has-labels  st-inline-share-buttons st-animated" id="st-1">
+        <div class="st-total st-hidden">
+          <span class="st-label"></span>
+          <span class="st-shares">
+            Shares
+          </span>
+        </div>
+        <div class="st-btn st-first st-hide-label" data-network="facebook" style="display: inline-block;">
+          <img alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+          <span class="st-label"></span>
+        </div>
+        <div class="st-btn st-hide-label" data-network="twitter" style="display: inline-block;">
+          <img alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+          <span class="st-label"></span>
+        </div>
+        <div class="st-btn st-hide-label" data-network="whatsapp" style="display: inline-block;">
+          <img alt="whatsapp sharing button" src="https://platform-cdn.sharethis.com/img/whatsapp.svg">
+          <span class="st-label"></span>
+        </div>
+        <div class="st-btn st-hide-label" data-network="reddit" style="display: inline-block;">
+          <img alt="reddit sharing button" src="https://platform-cdn.sharethis.com/img/reddit.svg">
+          <span class="st-label"></span>
+        </div>
+        <div class="st-btn st-hide-label" data-network="messenger" style="display: inline-block;">
+          <img alt="messenger sharing button" src="https://platform-cdn.sharethis.com/img/messenger.svg">
+          <span class="st-label"></span>
+        </div>
+        <div class="st-btn st-last st-hide-label" data-network="telegram" style="display: inline-block;">
+          <img alt="telegram sharing button" src="https://platform-cdn.sharethis.com/img/telegram.svg">
+          <span class="st-label"></span>
+        </div>
+      </div>
+
+      <div id="wrap-sv"><div class="text-muted notice mb-2"> If current server doesn't work please try other servers below. </div> <div class="svs"> <div class="sv active" data-id="41" data-link-id="1683357"> <div> <div>Vidstream</div> <span><i class="mdi mdi-database"></i> Server</span> </div> </div> <div class="sv" data-id="28" data-link-id="1683341"> <div> <div>MyCloud</div> <span><i class="mdi mdi-database"></i> Server</span> </div> </div> <div class="sv" data-id="45" data-link-id="1683373"> <div> <div>Filemoon</div> <span><i class="mdi mdi-database"></i> Server</span> </div> </div> <div class="sv" data-id="40" data-link-id="1683358"> <div> <div>Streamtape</div> <span><i class="mdi mdi-database"></i> Server</span> </div> </div> </div></div>
+      <div class="aside-wrap c-reverse">
+        <div class="main-content">
+          <div class="movie-detail"> 
+            <div class="movie-rating" itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating" data-id="66278" data-score="7.13"> <div class="score"> 
+              <div> <b itemprop="ratingValue">7.13</b></div> 
+              <span> 
+                <span itemprop="reviewCount" style="display:none">182</span>182 reviews 
+              </span> 
+            </div> 
+            <span class="stars"> 
+              <span class="star-active"><i class="material-icons">&#xf0ec;</i></span> 
+              <span class="star-active"><i class="material-icons">&#xf0ec;</i></span> 
+              <span class="star-active"><i class="material-icons">&#xf0ec;</i></span> 
+              <span class="star-active"><i class="material-icons">&#xf0ec;</i></span> 
+              <span class="star-inactive"><i class="material-icons">&#xe839;</i></span> 
+            </span> 
+          </div> 
+          <% movieInfo.forEach((movie) => { %>
+          <div class="movie-poster"> 
+            <span> <img itemprop="image" src="<%= movie.image %>" alt="The Other Two"> </span> 
+          </div> 
+          
+          <div class="movie-info"> <h1 itemprop="name" class="movie-title"><%= movie.name %></h1> 
+            <div class="sub-title"> 
+              <span class="quality">HD</span> 
+              <span class="rating">TV-MA</span> 
+              <span><i class="mdi mdi-star-circle"></i> <%= movie.rating %></span> 
+              <span>21 min</span> 
+            </div> 
+            <div class="movie-desc cts-wrapper"> An aspiring actor and his sister Brooke, a former professional dancer, try to find their places in the world while wrestling with their feelings about their 13-year-old brother Chase's sudden rise to internet fame. </div> 
+            <div class="movie-meta"> 
+              <div> 
+                <div>Type:</div> 
+                <span> <a href="tv"><%= movie.type %></a> </span> 
+              </div>
+              <div> 
+                <div>Country:</div> 
+                <span> <a href="/country/united-states" title="United States Movies, TV-Shows"><%= movie.country %></a> </span> 
+              </div> 
+              <div> 
+                <div>Genre:</div>
+                 <span> <a href="/genre/comedy" title="Comedy Movies, TV-Shows"><%= movie.genre %></a> </span> 
+                </div> 
+                <div> 
+                  <div>Release:</div>
+                   <span itemprop="dateCreated"><%= movie.date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }); %></span> 
+                  </div> 
+                  <div> 
+                    <div>Director:</div> 
+                    <span> N/A </span> 
+                  </div> 
+                  <div> 
+                    <div>Production:</div> 
+                    <span> 
+                      <a href="/production/broadway-video">Broadway Video</a>, 
+                      <a href="/production/comedy-partners">Comedy Partners</a>, 
+                      <a href="/production/above-average">Above Average</a> 
+                    </span> 
+                  </div> 
+                  <div> 
+                    <div>Cast:</div> 
+                    <span> 
+                      <a href="/star/ken-marino">Ken Marino</a>, 
+                      <a href="/star/helene-yorke">Heléne Yorke</a>, 
+                      <a href="/star/drew-tarver">Drew Tarver</a> 
+                    </span> 
+                  </div> 
+                  <div class="tags d-none d-sm-block"> 
+                    <div>Tags:</div> 
+                    <span> <h2>the other two streaming online</h2>, <h2>the other two episode stream</h2>, <h2>the other two online tv download</h2>, <h2>watch the other two online</h2>, <h2>the other two watch online</h2>, <h2>the other two free download</h2> </span> 
+                  </div> 
+                </div> 
+              </div> 
+            </div>
+          </div>
+        <% }) %>
+        
+        <div class="sidebar-season"> 
+          <div id="episodes" class="tv">
+            <div class="head"> 
+              <div class="dropdown"> 
+                <button class="btn dropdown-toggle" data-toggle="dropdown" data-placeholder="false">
+                   <i class="material-icons">&#xe949;</i>
+                   <span class="season-view"> Season 1 </span> 
+                </button> 
+                <div class="dropdown-menu" style="display: none;"> 
+                  <a class="dropdown-item season-item" href="javascript:;" data-comment-id="soap2day2_39657" data-season="1"> Season 1 </a> 
+                  <a class="dropdown-item season-item" href="javascript:;" data-comment-id="soap2day2_56371" data-season="2"> Season 2 </a> 
+                  <a class="dropdown-item season-item" href="javascript:;" data-comment-id="soap2day2_66278" data-season="3"> Season 3 </a> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="body"> 
+              <ul class="episodes" style="display: block" data-season="1"> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-1" data-id="280536" data-num="1" data-slug="1" title="" data-toggle="tooltip" data-original-title="2019-01-24" class="active"> <span class="num">Episode 1:</span> <span>Pilot</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-2" data-id="280537" data-num="2" data-slug="2" title="" data-toggle="tooltip" data-original-title="2019-01-31"> <span class="num">Episode 2:</span> <span>Chase Goes to a Premiere</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-3" data-id="280538" data-num="3" data-slug="3" title="" data-toggle="tooltip" data-original-title="2019-02-07"> <span class="num">Episode 3:</span> <span>Chase Gets a Girlfriend</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-4" data-id="280539" data-num="4" data-slug="4" title="" data-toggle="tooltip" data-original-title="2019-02-14"> <span class="num">Episode 4:</span> <span>Chase Gets the Gays</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-5" data-id="280540" data-num="5" data-slug="5" title="" data-toggle="tooltip" data-original-title="2019-02-21"> <span class="num">Episode 5:</span> <span>Chase Goes to a High School Dance</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-6" data-id="280541" data-num="6" data-slug="6" title="" data-toggle="tooltip" data-original-title="2019-02-28"> <span class="num">Episode 6:</span> <span>Chase Shoots a Music Video</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-7" data-id="280542" data-num="7" data-slug="7" title="" data-toggle="tooltip" data-original-title="2019-03-07"> <span class="num">Episode 7:</span> <span>Chase Gets a Nosebleed</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-8" data-id="280543" data-num="8" data-slug="8" title="" data-toggle="tooltip" data-original-title="2019-03-14"> <span class="num">Episode 8:</span> <span>Chase Turns Fourteen</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-9" data-id="280545" data-num="9" data-slug="9" title="" data-toggle="tooltip" data-original-title="2019-03-21"> <span class="num">Episode 9:</span> <span>Chase Drops His First Album</span> </a> </li> 
+                <li> <a href="/tv/the-other-two-pmvrq/1-10" data-id="280546" data-num="10" data-slug="10" title="" data-toggle="tooltip" data-original-title="2019-03-28"> <span class="num">Episode 10:</span> <span>Chase Performs at the VMAs</span> </a> </li> 
+              </ul> 
+              <ul class="episodes" style="display: none" data-season="2"> <li> <a href="/tv/the-other-two-pmvrq/2-1" data-id="288270" data-num="1" data-slug="1" title="" data-toggle="tooltip" data-original-title="2021-08-26"> <span class="num">Episode 1:</span> <span>Chase Goes to College</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-2" data-id="288271" data-num="2" data-slug="2" title="" data-toggle="tooltip" data-original-title="2021-08-26"> <span class="num">Episode 2:</span> <span>Pat Connects with Her Fans</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-3" data-id="288272" data-num="3" data-slug="3" title="" data-toggle="tooltip" data-original-title="2021-09-02"> <span class="num">Episode 3:</span> <span>Chase Guest-Edits Vogue</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-4" data-id="288274" data-num="4" data-slug="4" title="" data-toggle="tooltip" data-original-title="2021-09-02"> <span class="num">Episode 4:</span> <span>Pat Hosts Just Another Regular Show</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-5" data-id="288275" data-num="5" data-slug="5" title="" data-toggle="tooltip" data-original-title="2021-09-09"> <span class="num">Episode 5:</span> <span>Chase Gets Baptized</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-6" data-id="288273" data-num="6" data-slug="6" title="" data-toggle="tooltip" data-original-title="2021-09-09"> <span class="num">Episode 6:</span> <span>Pat Becomes #1 In Daytime</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-7" data-id="288276" data-num="7" data-slug="7" title="" data-toggle="tooltip" data-original-title="2021-09-16"> <span class="num">Episode 7:</span> <span>Chase Becomes Co-Owner of the Nets</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-8" data-id="288277" data-num="8" data-slug="8" title="" data-toggle="tooltip" data-original-title="2021-09-16"> <span class="num">Episode 8:</span> <span>Pat Gets an Offer to Host "Tic Tac Toe"</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-9" data-id="288278" data-num="9" data-slug="9" title="" data-toggle="tooltip" data-original-title="2021-09-23"> <span class="num">Episode 9:</span> <span>Chase and Pat Are Killing It</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/2-10" data-id="288279" data-num="10" data-slug="10" title="" data-toggle="tooltip" data-original-title="2021-09-23"> <span class="num">Episode 10:</span> <span>Brooke and Cary Go to a Fashion Show</span> </a> </li> </ul> 
+              <ul class="episodes" style="display: none" data-season="3"> <li> <a href="/tv/the-other-two-pmvrq/3-1" data-id="138797" data-num="1" data-slug="1" title="" data-toggle="tooltip" data-original-title="2023-05-04"> <span class="num">Episode 1:</span> <span>Cary Watches People Watch His Movie</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-2" data-id="138798" data-num="2" data-slug="2" title="" data-toggle="tooltip" data-original-title="2023-05-04"> <span class="num">Episode 2:</span> <span>Brooke Drives an Armpit Across America</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-3" data-id="138799" data-num="3" data-slug="3" title="" data-toggle="tooltip" data-original-title="2023-05-11"> <span class="num">Episode 3:</span> <span>Cary Becomes Somewhat of a Name</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-4" data-id="138800" data-num="4" data-slug="4" title="" data-toggle="tooltip" data-original-title="2023-05-18"> <span class="num">Episode 4:</span> <span>Episode #3.4</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-5" data-id="138801" data-num="5" data-slug="5" title="" data-toggle="tooltip" data-original-title="2023-05-25"> <span class="num">Episode 5:</span> <span>Episode #3.5</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-6" data-id="312503" data-num="6" data-slug="6" title="" data-toggle="tooltip" data-original-title="2023-06-01"> <span class="num">Episode 6:</span> <span>Episode #3.6</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-7" data-id="313687" data-num="7" data-slug="7" title="" data-toggle="tooltip" data-original-title="2023-06-08"> <span class="num">Episode 7:</span> <span>Episode #3.7</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-8" data-id="314687" data-num="8" data-slug="8" title="" data-toggle="tooltip" data-original-title="2023-06-15"> <span class="num">Episode 8:</span> <span>Episode #3.8</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-9" data-id="315954" data-num="9" data-slug="9" title="" data-toggle="tooltip" data-original-title="2023-06-22"> <span class="num">Episode 9:</span> <span>Episode #3.9</span> </a> </li> <li> <a href="/tv/the-other-two-pmvrq/3-10" data-id="316569" data-num="10" data-slug="10" title="" data-toggle="tooltip" data-original-title="2023-06-29"> <span class="num">Episode 10:</span> <span>Episode #3.10</span> </a> </li> </ul> 
+            </div> 
+            <div class="foot"> 
+              <div class="go2ep"> 
+                <span>Go to episode</span> 
+                <form class="d-flex" autocomplete="off">
+                   <input class="form-control" type="text" placeholder="1"> 
+                   <button class="btn btn-primary" type="submit"><i class="material-icons">&#xe5cc;</i></button> 
+                </form> 
+              </div> 
+            </div>
+          </div> 
+        </div>
+      </div>
+      
+
+      <div class="aside-wrap mt-5 c-reverse">
+        <div class="main-content">
+          <div class="text-center mb-3">
+            <a rel="nofollow" title="watch anime online" href="https://anix.to/?utm_source=soap2day.id" target="_blank"><img src="https://s3.bunnycdn.ru/assets/_bnx/anix_7xx.gif" style="max-width: 100%;"></a>
+          </div>
+          <section id="comment" data-src="//free-movies-online-1.disqus.com/embed.js" data-id="soap2day2_pmvrq" data-url="https://soap2day.id/tv/the-other-two-pmvrq" data-load="true"><div class="top"> <div class="begin"> <h2>Comments</h2> </div> </div><div class="body"> <div id="disqus_thread"><iframe id="dsq-app1600" name="dsq-app1600" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 455px !important;" src="https://disqus.com/embed/comments/?base=default&amp;f=free-movies-online-1&amp;t_i=soap2day2_39657&amp;t_u=https%3A%2F%2Fsoap2day.id%2Ftv%2Fthe-other-two-pmvrq%2F1&amp;t_d=Watch%20Online%20The%20Other%20Two%202019%20-%20Soap2day&amp;t_t=Watch%20Online%20The%20Other%20Two%202019%20-%20Soap2day&amp;s_o=default#version=3c00c65811f2cec80a8903c739975872" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0"></iframe></div> </div> </section>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  </main>
+
+
+<%- include('partials/footer.ejs') %>
+

@@ -56,34 +56,34 @@
               <div class="begin">
                 <h2>Recommended</h2>
                 <div class="strips">
-                  <div class="strip-string" id="js-strip-movies" onclick="activateTab('movies')">MOVIES</div>
-                  <div class="strip-string" id="js-strip-tvShows" onclick="activateTab('shows')">TV SHOWS</div>
-                  <div class="strip-string" id="js-strip-trend" onclick="activateTab('trending')">TRENDING</div>
+                  <div class="strips-main active" id="js-strip-movies">MOVIES</div>
+                  <div class="strips-main" id="js-strip-tv" >TV SHOWS</div>
+                  <div class="strips-main" id="js-strip-trending" >TRENDING</div>
                 </div> 
               </div>
             </div>
-
-
   
             <div class="tab-content" data-name="movies"> 
-              <div class="base content movies js-recommended-movies" id="moviesTab">
+              <div class="base content movies js-recommended-movies" >
                   <!-- CARDS -->
                   <% sortedMovieCards.slice(0, 14).forEach((movie) => { %>
                   <%- include('partials/movie-item.ejs', { movie: movie }) %>
                   <% }) %>
               </div>
             </div>
-            <div class="tab-content" data-name="shows"> 
-              <div class="base content movies js-recommended-movies" id="showsTab">
+            <div class="tab-content" data-name="tv shows"> 
+              <div class="base content movies js-recommended-movies" >
                               <!-- CARDS -->
-                <!--<% sortedSeriesCards.slice(0, 14).forEach((movie) => { %>
-                <%- include('partials/movie-item.ejs', { movie: movie }) %>
-                <% }) %>-->
+                  <% sortedSeriesCards.slice(0, 14).forEach((movie) => { %>
+                    <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                    <% }) %>
+                
               </div>
             </div>
             <div class="tab-content" data-name="trending"> 
-              <div class="base content movies js-recommended-movies" id="trendingTab">
+              <div class="base content movies js-recommended-movies">
                               <!-- CARDS -->
+                              
               </div>
             </div>
 
@@ -132,9 +132,7 @@
             
             
           </section>
-  
-  
-          
+
         </div>
   
   
@@ -148,32 +146,29 @@
               }
             } %>
             
-            <div class="top"> <div class="begin"> <h2>Suggestions</h2> </div> </div>
-            <div class="base mini in-sidebar movies">
+            <div class="top"> 
+              <div class="begin"> 
+                <h2>Trending</h2> 
+                <div class="strips">
+                  <div class="strip-sidebar active" id="js-strip-day" >DAY</div>
+                  <div class="strip-sidebar " id="js-strip-week" >WEEK</div>
+                  <div class="strip-sidebar " id="js-strip-month">MONTH</div>
+                </div> 
+              </div> 
+            </div>
+            <div class=" base mini in-sidebar movies" data-name="day">
               <% sortedMovieCards.slice(0, 7).forEach((movie) => { %>
-              <% var hypenMovieName = addHyphensBetweenWords(movie.name); %>
-              <a class="movie-item" href="/<%= movie.type %>/<%= hypenMovieName %>-<%= movie.itemId %>"> 
-                <div class="movie-info"> 
-                  <div class="top"> 
-                    <span><%= movie.type.charAt(0).toUpperCase()+ movie.type.slice(1); %></span> 
-                    <span>?</span> 
-                  </div> 
-                  <div class="name"><%= movie.name %></div> 
-                  <div class="bottom"> 
-                    <span><span id="star-and-rating"><i class="material-icons">&#xe885;</i><%= movie.rating %></span> </span>
-                    <% if(movie.type === "series") { %>
-                    <span>SS <%= movie.season %></span> 
-                    <span>EP <%= movie.episode %></span> 
-                    <% } else { %>
-                    <span><%= movie.year %></span> 
-                    <span><%= movie.duration %></span> 
-                    <% } %>
-                  </div> 
-                </div> 
-                <div class="movie-poster" data-tip="15497?/cachee40b"> 
-                  <div><img class=" ls-is-cached lazyloaded"  alt="<%= movie.image %>" src="<%= movie.image %>"></div> 
-                </div> 
-              </a>
+              <%- include('partials/sidebar-item.ejs', { movie: movie }) %>
+              <% }) %>
+            </div>
+            <div class=" base mini in-sidebar movies" data-name="week">
+              <% sortedSeriesCards.slice(0, 7).forEach((movie) => { %>
+              <%- include('partials/sidebar-item.ejs', { movie: movie }) %>
+              <% }) %>
+            </div>
+            <div class=" base mini in-sidebar movies" data-name="month">
+              <% sortedMovieCards.slice(0, 7).forEach((movie) => { %>
+              <%- include('partials/sidebar-item.ejs', { movie: movie }) %>
               <% }) %>
             </div>
            
@@ -185,7 +180,7 @@
   </div>
 
 </main>
-
+<script src="/js/onClick.js"></script>
 
 <%- include('partials/footer.ejs') %>
 
