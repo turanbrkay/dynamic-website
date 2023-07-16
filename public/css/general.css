@@ -6,11 +6,14 @@ html {
   font-family: Arya,sans-serif;
   height: 100%;
 }
+*, ::after, ::before {
+  box-sizing: border-box;
+}
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 body {
-height: 100%;
+
 font-family: 'Arya', sans-serif;
 font-size: 15px;
 text-align: left;
@@ -99,3 +102,12 @@ h1, h2, h3, h4, h5, h6 {
 .fs-1 {
   font-size: 1rem;
 }
+@media (max-width: 1535.9px) {
+  body, html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1399.98px){
+body, html {
+  font-size: 13.5px;
+}}

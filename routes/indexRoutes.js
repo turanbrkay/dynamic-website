@@ -1,6 +1,10 @@
+
 const express = require("express"),
       router = express.Router(),
       sortedMovieCards = require('../public/js/movieCards'),
+      MoviesDB = require("../models/movies"),
+      SeriesDB = require("../models/series"),
+      mainJS = require('../public/js/main'),
       sortedSeriesCards = require('../public/js/seriesCards');
 
 
@@ -10,23 +14,32 @@ return movieList.filter(movie => movie.itemId == Id);
 }
 
 router.get('/',(req,res)=> {
-    res.render('main')
+    res.render('intro')
 });
+
 router.get('/home',(req,res)=> {
-    res.render('home',{sortedMovieCards:sortedMovieCards, sortedSeriesCards: sortedSeriesCards})
+    const moviePromise = MoviesDB.find().exec();
+    const seriesPromise = SeriesDB.find().exec();
+
+    Promise.all([moviePromise, seriesPromise])
+      .then(([movies, series]) => {
+        res.render('home', { movies, series});
+        })
+        .catch((err) => {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+        });
+        
 });
-router.get('/filter',(req,res)=> {
-    res.render('filter',{sortedMovieCards:sortedMovieCards}) 
-});
-router.get('/admin',(req,res)=> {
-    res.render('admin') 
-});
+
+
+
 router.get('/movie/:movieName',(req,res)=> {
     const itemId = req.params.movieName.split('-').pop();
     const movieInfo = getMovieList(itemId,sortedMovieCards);
     res.render('player',{ movieInfo:movieInfo }) 
 });
-router.get('/series/:seriesName',(req,res)=> {
+router.get('/tv/:seriesName',(req,res)=> {
     const itemId = req.params.seriesName.split('-').pop();
     const movieInfo = getMovieList(itemId,sortedSeriesCards);
     res.render('player',{ movieInfo:movieInfo }) 

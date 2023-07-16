@@ -52,9 +52,11 @@ footer .container {
   padding: .9rem 0;
   line-height: .9rem;
 }
-
+.f-logo  {
+  margin-bottom: .4rem;
+}
 .f-logo img {
-  margin-left: -1rem;
+  margin-left: -.5rem;
 }
 
 footer .f-top .f-links div h4 {

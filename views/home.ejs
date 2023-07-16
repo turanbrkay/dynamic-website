@@ -66,16 +66,16 @@
             <div class="tab-content" data-name="movies"> 
               <div class="base content movies js-recommended-movies" >
                   <!-- CARDS -->
-                  <% sortedMovieCards.slice(0, 14).forEach((movie) => { %>
-                  <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                  <% movies.slice(0, 14).forEach((movie) => { %>
+                  <%- include('partials/movie-item.ejs', { cinema:movie}) %>
                   <% }) %>
               </div>
             </div>
             <div class="tab-content" data-name="tv shows"> 
               <div class="base content movies js-recommended-movies" >
                               <!-- CARDS -->
-                  <% sortedSeriesCards.slice(0, 14).forEach((movie) => { %>
-                    <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                  <% series.slice(0, 14).forEach((serie) => { %>
+                    <%- include('partials/movie-item.ejs', { cinema:serie  }) %>
                     <% }) %>
                 
               </div>
@@ -103,8 +103,8 @@
             <div class="section-content"> 
               <div class="base content movies" id="js-latest-movie">
                 <!-- CARDS -->
-                <% sortedMovieCards.slice(0, 14).forEach((movie) => { %>
-                <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                <% movies.slice(0, 14).forEach((movie) => { %>
+                <%- include('partials/movie-item.ejs', { cinema:movie }) %>
                 <% }) %>
               </div>
             </div>
@@ -124,8 +124,8 @@
             <div class="section-content"> 
               <div class="base content movies js-latest-TVShows">
                   <!-- CARDS -->
-                  <% sortedSeriesCards.slice(0, 14).forEach((movie) => { %>
-                  <%- include('partials/movie-item.ejs', { movie: movie }) %>
+                  <% series.slice(0, 14).forEach((serie) => { %>
+                  <%- include('partials/movie-item.ejs', { cinema:serie }) %>
                   <% }) %>
               </div>
             </div>
@@ -157,18 +157,18 @@
               </div> 
             </div>
             <div class=" base mini in-sidebar movies" data-name="day">
-              <% sortedMovieCards.slice(0, 7).forEach((movie) => { %>
-              <%- include('partials/sidebar-item.ejs', { movie: movie }) %>
+              <% movies.slice(0, 7).forEach((movie) => { %>
+              <%- include('partials/sidebar-item.ejs', { cinema:movie }) %>
               <% }) %>
             </div>
             <div class=" base mini in-sidebar movies" data-name="week">
-              <% sortedSeriesCards.slice(0, 7).forEach((movie) => { %>
-              <%- include('partials/sidebar-item.ejs', { movie: movie }) %>
+              <% series.slice(0, 7).forEach((serie) => { %>
+              <%- include('partials/sidebar-item.ejs', { cinema:serie }) %>
               <% }) %>
             </div>
             <div class=" base mini in-sidebar movies" data-name="month">
-              <% sortedMovieCards.slice(0, 7).forEach((movie) => { %>
-              <%- include('partials/sidebar-item.ejs', { movie: movie }) %>
+              <% movies.slice(0, 7).forEach((movie) => { %>
+              <%- include('partials/sidebar-item.ejs', { cinema:movie }) %>
               <% }) %>
             </div>
            

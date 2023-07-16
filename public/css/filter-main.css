@@ -2,12 +2,6 @@
   background-color: #004daa !important;
   color: #e8e6e3 !important;
 }
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-.mb-3, .my-3 {
-  margin-bottom: 1rem !important;
-}
 ::placeholder {
   opacity: 0.5 !important;
 }
@@ -117,7 +111,12 @@ button, input, optgroup, select, textarea {
   border-style: none;
 }
 .movie-azfilter > div .btn.dropdown-toggle::after, .movie-filters > div .btn.dropdown-toggle::after, .navigation > div .btn.dropdown-toggle::after {
+  content: "\e5c5";
+  font-family: "Material Icons";
+  border: 0;
+  transition: transform .3s;
   border-color: currentcolor;
+  font-size: 1.5rem;
 }
 .dropdown-toggle::after {
   display: inline-block;
@@ -126,13 +125,12 @@ button, input, optgroup, select, textarea {
 }
 .movie-azfilter > div .btn.dropdown-toggle, .movie-filters > div .btn.dropdown-toggle, .navigation > div .btn.dropdown-toggle {
   justify-content: space-between;
-  display: inline-flex;
+  display: inline-flex !important;
 }
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
 .movie-azfilter > div .dropdown-toggle, .movie-azfilter > li > a, .movie-filters > div .dropdown-toggle, .movie-filters > li > a, .navigation > div .dropdown-toggle, .navigation > li > a {
-  border-color: transparent;
   color: rgb(154, 146, 132);
   background-color: rgb(17, 18, 19);
   background-image: none;
@@ -143,6 +141,10 @@ button, input, optgroup, select, textarea {
   background: #161616;
   text-align: center;
   border: 1px solid transparent;
+}
+.movie-azfilter .dropdown.show button, .movie-azfilter > div button:hover, .movie-azfilter > li > a.active, .movie-azfilter > li > a:hover, .movie-filters .dropdown.show button, .movie-filters > div button:hover, .movie-filters > li > a.active, .movie-filters > li > a:hover, .navigation .dropdown.show button, .navigation > div button:hover, .navigation > li > a.active, .navigation > li > a:hover {
+  background: #208e79;
+  color: #b6fff5;
 }
 .movie-azfilter .page-item, .movie-azfilter .page-link, .movie-azfilter .pagination, .movie-azfilter .search, .movie-azfilter > div .btn, .movie-azfilter > li > a, .movie-filters .page-item, .movie-filters .page-link, .movie-filters .pagination, .movie-filters .search, .movie-filters > div .btn, .movie-filters > li > a, .navigation .page-item, .navigation .page-link, .navigation .pagination, .navigation .search, .navigation > div .btn, .navigation > li > a {
   height: 2.5rem;
@@ -166,6 +168,8 @@ button, input, optgroup, select, textarea {
 }
 .movie-filters > div .filter {
   width: 100%;
+  display: flex !important;
+  align-items: center;
 }
 .movie-filters > div .filter .material-icons {
   font-size: 1.2rem;
@@ -351,10 +355,45 @@ a:hover {
   overflow: hidden;
   height: 2.6rem;
 }
-
-
-
-
-.tab-content {
-  display: flex;
+@media (max-width: 1399.98px) {
+  .content.movies .movie-item {
+    width: 20%;
+  }
 }
+@media (max-width: 991.98px){
+.content.movies .movie-item {
+  width: 25%;
+}}
+@media (max-width: 767.98px) {
+.content.movies .movie-item {
+  width: 50%;
+}}
+@media (min-width: 480px) and (max-width: 767.9px){
+.content.movies .movie-item {
+  width: 33.3333333333%;
+}}
+@media (max-width: 1199.98px){
+main .aside-wrap {
+  flex-direction: column;
+}}
+@media (max-width: 1199.98px) {
+main .aside-wrap .main-content {
+  margin-right: 0;
+}}
+
+@media (max-width: 1199.98px) {
+.movie-filters > div {
+  width: 20%;
+}}
+@media (max-width: 1199.98px) {
+.movie-filters > div:last-child {
+  width: 40%;
+}}
+@media (max-width: 575.98px) {
+.movie-filters > div {
+  width: 50%;
+}
+.movie-filters > div:last-child {
+  width: 100%;
+}}
+

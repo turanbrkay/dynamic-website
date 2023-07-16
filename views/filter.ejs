@@ -12,33 +12,38 @@
               <div class="dropdown responsive">
                 <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> 
                   <span class="value" data-placeholder="Genre" data-label-placement="true">Genre</span>
-                  <i class="material-icons">&#xe5cf;</i>
+                  
                  </button>
               </div>
             </div>  
             <div>
               <div class="dropdown responsive">
-                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Year" data-label-placement="true">Year</span><i class="material-icons">&#xe5cf;</i> </button>
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Year" data-label-placement="true">Year</span> </button>
               </div>
             </div> 
+            <div>
+              <div class="dropdown responsive">
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Country" data-label-placement="true">Country</span> </button>
+              </div>
+            </div>
             <div> 
               <div class="dropdown responsive">
-                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Rating" data-label-placement="true">Rating</span> <i class="material-icons">&#xe5cf;</i></button>
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Rating" data-label-placement="true">Rating</span> </button>
               </div>
             </div>  
             <div>
               <div class="dropdown responsive">
-                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Type" data-label-placement="true">TV-Shows</span><i class="material-icons">&#xe5cf;</i> </button>
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Type" data-label-placement="true">TV-Shows</span> </button>
               </div>
             </div>  
             <div>
               <div class="dropdown responsive">
-                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> Quality <span class="value" data-label-placement="true"></span><i class="material-icons">&#xe5cf;</i> </button>
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> Quality <span class="value" data-label-placement="true"></span></button>
               </div>
             </div>  
             <div>
               <div class="dropdown responsive">
-                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Sort by" data-label-placement="true">Recently updated</span><i class="material-icons">&#xe5cf;</i> </button>
+                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> <span class="value" data-placeholder="Sort by" data-label-placement="true">Recently updated</span> </button>
               </div>
             </div>  
             <div> <button class="filter btn btn-primary"><i class="material-icons">&#xef4f;</i> Filter</button> </div>
@@ -46,8 +51,8 @@
           <div class="clearfix"></div>
           <div class="base content movies" id="filter-content">
              <!-- CARDS -->
-             <% sortedMovieCards.forEach((movie) => { %>
-              <%- include('partials/movie-item.ejs', { movie: movie }) %>
+             <% movies.forEach((movie) => { %>
+              <%- include('partials/movie-item.ejs', { cinema: movie }) %>
               <% }) %>
                      
           </div>
@@ -65,8 +70,8 @@
           
           <div class="top"> <div class="begin"> <h2>Suggestions</h2> </div> </div>
           <div class="base mini in-sidebar movies">
-            <% sortedMovieCards.slice(0, 10).forEach((movie) => { %>
-            <%- include('partials/sidebar-item.ejs', { movie: movie }) %>
+            <% movies.slice(0, 10).forEach((movie) => { %>
+            <%- include('partials/sidebar-item.ejs', { cinema: movie }) %>
             <% }) %>
           </div>
          

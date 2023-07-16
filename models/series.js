@@ -2,10 +2,12 @@ const mongoose = require('mongoose'),
       Schema = mongoose.Schema;
 
 const seriesSchema = new Schema({
+  id:String,
   name: String,
   rating: String,
   type: String,
-  duration: String,
+  season: String,
+  episode: String,
   releaseDate: Date,
   poster: String,
   banner: String,
@@ -14,6 +16,7 @@ const seriesSchema = new Schema({
   director: String,
   production: String,
   actors: String, 
+  maturity:String,
 },
 {
   timestamps: true // Koleksiyon adını burada belirtin

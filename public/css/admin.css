@@ -209,6 +209,7 @@ body {
 }
 .wrapper a .material-icons{
   font-size: 5rem;
+  color: rgb(43, 43, 255);
 }
 .active {
   display: block;

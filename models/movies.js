@@ -2,6 +2,7 @@ const mongoose = require('mongoose'),
       Schema = mongoose.Schema;
 
 const moviesSchema = new Schema({
+  id:String,
   name: String,
   rating: String,
   type: String,
@@ -13,7 +14,8 @@ const moviesSchema = new Schema({
   country: String,
   director: String,
   production: String,
-  actors: String, 
+  actors: String,
+  maturity:String,
 },
 {
   timestamps: true // Koleksiyon adını burada belirtin

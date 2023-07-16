@@ -1,3 +1,20 @@
+
+/* Button */
+.btn {
+  display: inline-block !important;
+  font-weight: 400;
+  color: #848484;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .5rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 .btn-header {
   background: 0 0;
   background-color: rgba(0, 0, 0, 0);
@@ -11,22 +28,6 @@ cursor: pointer;
 display: inline-flex;
 align-items: center;
 justify-content: center;
-}
-/* Button */
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  color: #848484;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: .375rem 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .5rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 .btn-viewmore {
   display: inline-flex;
@@ -140,6 +141,24 @@ button, input, optgroup, select, textarea {
 #st-1.st-has-labels .st-btn {
   min-width: 120px;
 }
+@media (max-width: 1400px) {
+  #st-1.st-has-labels .st-btn {
+    min-width: 110px;
+  } }
+  @media (max-width: 1300px) {
+    #st-1.st-has-labels .st-btn {
+      min-width: 100px;
+    } }
+@media (max-width: 1199.98px) {
+#st-1.st-has-labels .st-btn {
+  min-width: 90px;
+} 
+}
+@media (max-width: 700px) {
+  #st-1.st-has-labels .st-btn {
+    min-width: 30px;
+  } 
+  }
 #st-1 .st-btn {
   box-sizing: border-box;
   border-radius: 4px;

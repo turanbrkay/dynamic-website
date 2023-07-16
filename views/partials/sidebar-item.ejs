@@ -8,26 +8,27 @@
       
       
       
-      <% var hypenMovieName = addHyphensBetweenWords(movie.name); %>
-      <a class="movie-item" href="/<%= movie.type %>/<%= hypenMovieName %>-<%= movie.itemId %>"> 
+      <% var hypenMovieName = addHyphensBetweenWords(cinema.name); %>
+      <a class="movie-item" href="/<%= cinema.type %>/<%= hypenMovieName %>-<%= cinema.itemId %>"> 
         <div class="movie-info"> 
           <div class="top"> 
-            <span><%= movie.type.charAt(0).toUpperCase()+ movie.type.slice(1); %></span> 
-            <span>?</span> 
+            <span><%= cinema.type.charAt(0).toUpperCase()+ cinema.type.slice(1); %></span> 
+            <span><%= cinema.maturity %></span> 
           </div> 
-          <div class="name"><%= movie.name %></div> 
+          <div class="name"><%= cinema.name %></div> 
           <div class="bottom"> 
-            <span><span id="star-and-rating"><i class="material-icons">&#xe885;</i><%= movie.rating %></span> </span>
-            <% if(movie.type === "series") { %>
-            <span>SS <%= movie.season %></span> 
-            <span>EP <%= movie.episode %></span> 
+            <span><span id="star-and-rating"><i class="material-icons">&#xe885;</i><%= cinema.rating %></span> </span>
+          
+            <% if(cinema.type.trim() === "TV") {  %>
+            <span>SS <%= cinema.season %></span> 
+            <span>EP <%= cinema.episode %></span> 
             <% } else { %>
-            <span><%= movie.year %></span> 
-            <span><%= movie.duration %></span> 
+            <span><%= cinema.releaseDate.getFullYear(); %></span> 
+            <span><%= cinema.duration %></span> 
             <% } %>
           </div> 
         </div> 
         <div class="movie-poster" data-tip="15497?/cachee40b"> 
-          <div><img class=" ls-is-cached lazyloaded"  alt="<%= movie.image %>" src="<%= movie.image %>"></div> 
+          <div><img class=" ls-is-cached lazyloaded"  alt="<%= cinema.name %>" src="<%= cinema.poster %>"></div> 
         </div> 
       </a>

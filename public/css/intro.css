@@ -1,8 +1,13 @@
 /* css file for the firstTOfirst page  */ 
 
+
 #intro {
   background-image: url(../sources/img/main-background.png);
   background-size: cover;  
+  
+}
+body {
+  height: 100%;
 }
 
 #intro .wrapper {
@@ -15,7 +20,6 @@
   background: linear-gradient(90deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.5) 20%,rgba(0,0,0,.93) 35%);
   padding-left: 35%;
   padding-top: 5%;
-  font-size: 15px;
 }
 #intro .container {
   max-width: 1800px;
@@ -45,5 +49,32 @@
 #intro p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 1199.98px) {
+  #intro .main {
+    padding-left: 0 !important;
+    width: 100%;
+    background: #000 !important;
+    padding-left: 0px;
+  
+  }
+#intro .main .intro-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#intro .main .at-share-btn-elements, #intro .main .bookmark, #intro .main .footer, #intro .main .logo, #intro .main h1 {
+  text-align: center;
+}
+#intro .main .intro-wrap #head-search {
+  display: flex;
+  justify-content: center;
+}
+#intro .main a {
+  max-width: 30rem;
+  margin: 0 auto;
+}
 }
 

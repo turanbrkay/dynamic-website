@@ -1,10 +1,10 @@
 // Gerekli modüller yüklendi.
 const express   = require("express"),
       indexRoutes = require("./routes/indexRoutes"),
+      adminRoutes = require("./routes/adminRoutes"),
+      filterRoutes = require("./routes/filterRoutes"),
       morgan = require('morgan'),
       mongoose = require('mongoose'),
-      MoviesDB = require('./models/movies'),
-      SeriesDB = require('./models/series'),
       bodyParser = require('body-parser'),
       app       = express();
 
@@ -13,44 +13,23 @@ mongoose.connect(dbURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+
+
 // App config
 app.set('view engine','ejs');
 app.use(express.static('public')); // public directory kullanıma hazır hale getirildi.
 app.use(morgan('tiny'));
 app.use(express.urlencoded({extended:true}));
 
-app.post('/admin/movie/add',(req,res) => {
-  const movie = new MoviesDB(req.body)
-
-  movie.save()
-    .then((result) => {
-      res.redirect('/admin');
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-})
-
-app.post('/admin/series/add',(req,res) => {
-  const series = new SeriesDB(req.body)
-
-  series.save()
-    .then((result) => {
-      res.redirect('/admin');
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-})
-
-
-
 //Routes using
 app.use(indexRoutes);
+app.use(adminRoutes);
+app.use(filterRoutes);
 
 
 
-const server = app.listen(3000, (error)=> {
+const server = app.listen(2000, (error)=> {
               if(error){
                 console.log(error);
               }

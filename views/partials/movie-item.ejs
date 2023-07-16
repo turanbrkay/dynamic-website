@@ -1,4 +1,3 @@
-
 <% function addHyphensBetweenWords(str) {
   if (str.length > 1) {
     return str.split(' ').join('-');
@@ -9,17 +8,22 @@
 
   <div class="movie-item">
     <div class="movie-border">
-      <% var hypenMovieName = addHyphensBetweenWords(movie.name); %>
-      <a href="/<%= movie.type %>/<%= hypenMovieName %>-<%= movie.itemId %> " data-tip="65597?/cachef208" class="tooltipstered" style="opacity: 1;"> 
+      <% var hypenMovieName = addHyphensBetweenWords(cinema.name); %>
+      <a href="/<%=cinema.type.toLowerCase().trim() %>/<%= hypenMovieName %>-<%= cinema.id %> " data-tip="65597?/cachef208" class="tooltipstered" style="opacity: 1;"> 
         <div class="quality">HD</div> 
         <div class="movie-poster"> 
-          <div><img class=" lazyloaded" alt="<%= movie.name %>" src="<%= movie.image %>"></div> 
+          <div><img class=" lazyloaded" alt="<%= cinema.name %>" src="<%= cinema.poster %>"></div> 
         </div> 
       </a>
-      <a href="/<%= movie.type %>" class="name"><%= movie.name %></a>
+      <a href="/<%=cinema.type.toLowerCase().trim() %>" class="name"><%= cinema.name %></a>
       <div class="movie-info"> 
-        <div class="meta"> <span><%= movie.year %></span><span><%= movie.duration %></span> </div> 
-        <div class="type">movie</div> 
+        <% if(cinema.type.trim() === "TV") { %>
+          <div class="meta"> <span>SS <%= cinema.season; %></span><span>EP <%= cinema.episode %></span> </div> 
+          <div class="type">TV</div> 
+          <% } else { %>
+          <div class="meta"> <span><%= cinema.releaseDate.getFullYear(); %></span><span><%= cinema.duration %></span> </div> 
+          <div class="type">movie</div> 
+          <% } %>
       </div>
     </div>
   </div>
