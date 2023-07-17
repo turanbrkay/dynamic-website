@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/sign.css">
+
    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
@@ -133,12 +135,12 @@
                     <button class="btn-header " data-toggle="dropdown" data-placeholder="false"> <i class="material-icons">&#xe7f4;</i> </button> 
                   </div>
                   <%}%>  
-                  <div class="user dropdown" onclick="showDropdownMenu()" >
+                  <div class="user dropdown">
                     <a class="btn-header" data-toggle="modal" data-target="#sign">
                       <i class="material-icons">&#xe853;</i>
                     </a>
                     <% if (user) { %>
-                    <div class="dropdown-menu dropdown-menu-right" id="dropdownMenu"> 
+                    <div class="dropdown-menu dropdown-menu-right" > 
                       <a class="dropdown-item" href="user/profile"><i class="material-icons">&#xe7fd;</i> Profile</a> 
                       <a class="dropdown-item" href="user/watching"><i class="material-icons">&#xe068;</i>Continue Watching</a> 
                       <a class="dropdown-item" href="user/bookmark"><i class="material-icons">&#xe598;</i> Bookmark</a> 
@@ -164,15 +166,19 @@
     headSearch.classList.toggle("no-overflow");
     searchWrapper.classList.toggle("shown");
   }
-  
-  function showDropdownMenu() {
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    if (dropdownMenu.style.display === 'block') {
-      dropdownMenu.style.display = 'none';
-    } else {
-      dropdownMenu.style.display = 'block';
+  var userIcon = document.querySelector('.user.dropdown');
+  userIcon.addEventListener('click', function() {
+    var user = JSON.parse('<%- JSON.stringify(user) %>');
+    var dropdownMenu =  document.querySelector('.dropdown-menu');
+    if(user) {
+      if (dropdownMenu.style.display === 'block') {
+        dropdownMenu.style.display = 'none';
+      } else {
+        dropdownMenu.style.display = 'block';
+      }
     }
-  }
+    
+  });
 
   const expandElements = document.querySelectorAll('.expand');
 

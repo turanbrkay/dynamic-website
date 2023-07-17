@@ -72,14 +72,27 @@ a {
 .mt-4, .my-4 {
   margin-top: 1.5rem !important;
 }
+.mt-3, .my-3 {
+  margin-top: 1rem !important;
+}
 .mt-5, .my-5 {
   margin-top: 3rem !important;
 }
+
 .pb-3, .py-3 {
   padding-bottom: 1rem !important;
 }
 .pt-3, .py-3 {
   padding-top: 1rem !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.justify-content-center {
+  justify-content: center !important;
 }
 
 .mb-2, .my-2 {
@@ -97,6 +110,12 @@ h1, h2, h3, h4, h5, h6 {
 .flex {
   display: flex;
   align-items: center;
+}
+.text-muted {
+  color: #777 !important;
+}
+.d-flex {
+  display: flex !important;
 }
 
 .fs-1 {

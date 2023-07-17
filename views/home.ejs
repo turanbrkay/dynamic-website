@@ -180,8 +180,66 @@
   </div>
 
 </main>
+
 <script src="/js/onClick.js"></script>
 
 <%- include('partials/footer.ejs') %>
+
+<%- include('partials/login.ejs') %>
+
+<script>
+   // Sunucudan gelen kullanıcı bilgisi
+  var userIcon = document.querySelector('[data-target="#sign"]');
+  var signModal = document.getElementById('sign');
+  var signCloses = document.querySelectorAll('.sign-close');
+  var links = document.querySelectorAll('[data-target]');
+
+  userIcon.addEventListener('click', function() {
+    var user = JSON.parse('<%- JSON.stringify(user) %>');
+    if(!user){
+      toggleSignModal();
+    }
+  });
+
+  signCloses.forEach(function(signClose) {
+    signClose.addEventListener('click', toggleSignModal);
+  });
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      var target = this.getAttribute('data-target');
+      if(target == 'signin' || target == 'signup' || target == 'forgot') {
+        toggleModal(target);
+      }
+      
+    });
+});
+
+  function toggleModal(target) {
+    var modals = document.querySelectorAll('.modal-content.cts-block');
+    modals.forEach(function(modal) {
+      modal.style.display = (modal.getAttribute('data-name') === target) ? 'flex' : 'none';
+    });
+  }
+
+  function toggleSignModal() {
+    signModal.classList.toggle('show');
+    document.body.classList.toggle('modal-open');
+    var isModalVisible = signModal.classList.contains('show');
+    
+    if (isModalVisible) {
+      signModal.setAttribute('aria-modal', 'true');
+      signModal.setAttribute('role', 'dialog');
+      signModal.removeAttribute('aria-hidden');
+    } else {
+      signModal.removeAttribute('aria-modal');
+      signModal.removeAttribute('role');
+      signModal.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  
+
+</script>
 
   

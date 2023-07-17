@@ -17,7 +17,7 @@ const login_post = async (req,res) => {
     const user = await UserDB.login(username,password);
     const token = createToken(user._id);
     res.cookie('jwt',token,{httpOnly:true,maxAge:maxAge*1000});
-    res.render('admin');
+    res.render('home');
   }
   catch(e) {
     console.log(e);
@@ -30,7 +30,6 @@ const signup_get = (req,res) => {
 }
 const signup_post = (req,res) => {
   const user = new UserDB(req.body);
-
   user.save()
     .then((result) => {
       res.redirect('/home');
