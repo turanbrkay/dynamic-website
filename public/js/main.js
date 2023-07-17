@@ -17,7 +17,17 @@ function generateCustomID(length) {
   return result;
 }
 
+function showFilterSearch() {
+  var headSearch = document.getElementById("head-search");
+  var searchWrapper = document.getElementById("search-wrapper");
+
+  headSearch.classList.toggle("active");
+  headSearch.classList.toggle("no-overflow");
+  searchWrapper.classList.toggle("shown");
+}
+
 module.exports = { 
   addHyphensBetweenWords,
-  generateCustomID
+  generateCustomID,
+  showFilterSearch
  };

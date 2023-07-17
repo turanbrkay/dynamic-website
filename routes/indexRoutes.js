@@ -1,11 +1,9 @@
 
 const express = require("express"),
       router = express.Router(),
-      sortedMovieCards = require('../public/js/movieCards'),
       MoviesDB = require("../models/movies"),
       SeriesDB = require("../models/series"),
-      mainJS = require('../public/js/main'),
-      sortedSeriesCards = require('../public/js/seriesCards');
+      mainJS = require('../public/js/main');
 
 
 function getMovieList(Id,movieList) {
@@ -23,7 +21,7 @@ router.get('/home',(req,res)=> {
 
     Promise.all([moviePromise, seriesPromise])
       .then(([movies, series]) => {
-        res.render('home', { movies, series});
+        res.render('home', { movies, series, mainJS});
         })
         .catch((err) => {
         console.error(err);

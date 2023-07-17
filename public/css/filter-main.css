@@ -337,6 +337,7 @@ a:hover {
   /* Diğer stil özellikleri */
 }
 
+
 .content.movies .movie-item:hover .movie-border .movie-poster::after {
   opacity: 1; /* Hover durumunda görünür hale gelir */
 }
@@ -367,6 +368,9 @@ a:hover {
 @media (max-width: 767.98px) {
 .content.movies .movie-item {
   width: 50%;
+}
+.header .wrap-head {
+  height: 5rem;
 }}
 @media (min-width: 480px) and (max-width: 767.9px){
 .content.movies .movie-item {
@@ -395,5 +399,11 @@ main .aside-wrap .main-content {
 }
 .movie-filters > div:last-child {
   width: 100%;
+}
+#head-search {
+  position: unset;
+}
+#head-search #show-search-btn {
+  position: unset;
 }}
 

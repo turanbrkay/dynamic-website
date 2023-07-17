@@ -26,8 +26,8 @@
                 <div id="head-nav">
                   <ul>
                     <li class="expand">
-                      <a href="/filter" id="genre-toggle">Genre</a>
-                      <ul style="display: none;" id="genre-list">
+                      <a id="genre-toggle">Genre</a>
+                      <ul id="genre-list">
                         <li><a title="Action movies" href="/genre/action">Action</a></li>
                         <li><a title="Adult movies" href="/genre/adult">Adult</a></li>
                         <li><a title="Adventure movies" href="/genre/adventure">Adventure</a></li>
@@ -62,8 +62,8 @@
                       </ul>
                     </li>
                     <li class="expand">
-                      <a href="/filter" id="country-toggle">Country</a>
-                      <ul style="display: none;" id="country-list">
+                      <a id="country-toggle">Country</a>
+                      <ul id="country-list">
                         <li><a title="Argentina movies" href="/genre/argentina">Argentina</a></li>
                         <li><a title="Australia movies" href="/genre/australia">Australia</a></li>
                         <li><a title="Austria movies" href="/genre/austria">Austria</a></li>
@@ -113,21 +113,91 @@
 
               <div class="r-head">
                 <div id="head-search" class="">
-                  <div id="search-wrapper"  class="shown">
+                  <div id="search-wrapper"  class="">
+                    
+                    <form action="/filter" autocomplete="off"> <a class="filter-btn btn btn-sm" href="/filter"><i class="mdi mdi-filter"></i> Filter</a> 
+                      <input type="text" placeholder="Search movies..." name="keyword"> 
+                      <button type="submit"><i class="mdi mdi-magnify"></i></button> 
+                    </form> 
+                    <div class="search-suggestion" style="display: none;"></div> 
                     
                   </div>
-                  <div id="show-search-btn" >
+                  <div id="show-search-btn" onclick="showFilterSearch()" >
                     <i class="material-icons">&#xE8B6;</i>
                   </div>
                  
                 </div>
                 <div id="user-head">
-                  <a href="admin" class="btn-header" data-toggle="modal" data-target="#sign">
-                    <i class="material-icons">&#xe853;</i>
-                  </a>
+                  <% if (user) { %>
+                  <div class="dropdown user-notify"> 
+                    <button class="btn-header " data-toggle="dropdown" data-placeholder="false"> <i class="material-icons">&#xe7f4;</i> </button> 
+                  </div>
+                  <%}%>  
+                  <div class="user dropdown" onclick="showDropdownMenu()" >
+                    <a class="btn-header" data-toggle="modal" data-target="#sign">
+                      <i class="material-icons">&#xe853;</i>
+                    </a>
+                    <% if (user) { %>
+                    <div class="dropdown-menu dropdown-menu-right" id="dropdownMenu"> 
+                      <a class="dropdown-item" href="user/profile"><i class="material-icons">&#xe7fd;</i> Profile</a> 
+                      <a class="dropdown-item" href="user/watching"><i class="material-icons">&#xe068;</i>Continue Watching</a> 
+                      <a class="dropdown-item" href="user/bookmark"><i class="material-icons">&#xe598;</i> Bookmark</a> 
+                      <a class="dropdown-item" href="user/notification"><i class="material-icons">&#xe7f4;</i> Notification</a> 
+                      <a class="dropdown-item" href="user/settings"><i class="material-icons">&#xe8b8;</i> Settings</a> 
+                      <a class="dropdown-item last" href="user/logout"><i class="material-icons">&#xe9ba;</i> Sign Out</a> 
+                    </div>
+                    <%}%>  
+                  </div>
+                 
                 </div>
               </div>
             </div>
           </div>
         </div>
       </header>
+<script>
+  function showFilterSearch() {
+    var headSearch = document.getElementById("head-search");
+    var searchWrapper = document.getElementById("search-wrapper");
+  
+    headSearch.classList.toggle("active");
+    headSearch.classList.toggle("no-overflow");
+    searchWrapper.classList.toggle("shown");
+  }
+  
+  function showDropdownMenu() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    if (dropdownMenu.style.display === 'block') {
+      dropdownMenu.style.display = 'none';
+    } else {
+      dropdownMenu.style.display = 'block';
+    }
+  }
+
+  const expandElements = document.querySelectorAll('.expand');
+
+  // Her bir expand öğesi için click dinleyicisi ekle
+  expandElements.forEach((expandElement) => {
+    expandElement.addEventListener('click', toggleExpand);
+  });
+  
+  // Click dinleyicisi fonksiyonu
+  function toggleExpand() {
+    const subMenu = this.querySelector('ul');
+    subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+  }
+  
+  // Body üzerine tıklandığında alt menüyü kapat
+  document.body.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!target.classList.contains('expand') && !target.closest('.expand')) {
+      expandElements.forEach((expandElement) => {
+        const subMenu = expandElement.querySelector('ul');
+        subMenu.style.display = 'none';
+      });
+    }
+  });
+
+
+</script>
+      

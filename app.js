@@ -3,6 +3,9 @@ const express   = require("express"),
       indexRoutes = require("./routes/indexRoutes"),
       adminRoutes = require("./routes/adminRoutes"),
       filterRoutes = require("./routes/filterRoutes"),
+      authenticationRoutes = require("./routes/authenticationRoutes"),
+      {requireAuth,checkUser} = require('./middlewares/authMiddleware'),
+      cookieParser = require('cookie-parser'),
       morgan = require('morgan'),
       mongoose = require('mongoose'),
       bodyParser = require('body-parser'),
@@ -21,11 +24,14 @@ app.set('view engine','ejs');
 app.use(express.static('public')); // public directory kullanıma hazır hale getirildi.
 app.use(morgan('tiny'));
 app.use(express.urlencoded({extended:true}));
+app.use(cookieParser());
 
+app.get ('*',checkUser);
 //Routes using
 app.use(indexRoutes);
-app.use(adminRoutes);
+app.use('/admin',requireAuth,adminRoutes);
 app.use(filterRoutes);
+app.use(authenticationRoutes);
 
 
 
