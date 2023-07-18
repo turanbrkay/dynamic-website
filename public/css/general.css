@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap');
-
+body, html {
+  font-size: 15px;
+  font-family: Arya,sans-serif;
+  height: 100%;
+}
 html {
   font-size: 15px;
   font-family: Arya,sans-serif;
@@ -32,7 +36,7 @@ section {
   background-color: black;
 }
 main {
-  flex-grow: 1;
+  flex-grow: 1 !important;
 }
 p {
   margin: 0%;
@@ -78,6 +82,9 @@ a {
 .mt-5, .my-5 {
   margin-top: 3rem !important;
 }
+.mr-02 {
+  margin-right: .2rem ;
+}
 
 .pb-3, .py-3 {
   padding-bottom: 1rem !important;
@@ -117,7 +124,10 @@ h1, h2, h3, h4, h5, h6 {
 .d-flex {
   display: flex !important;
 }
-
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
 .fs-1 {
   font-size: 1rem;
 }

@@ -32,3 +32,6 @@
 .errors-page .btn-primary span i{
   margin-right: .5rem;
 }
+.errors-page main {
+  flex-grow: 1;
+}

@@ -9,14 +9,14 @@ const requireAuth = (req,res,next) => {
     jwt.verify(token,'firmino', (err,decodedToken) => {
       if(err){
         console.log(err);
-        res.redirect('/login');
+        res.redirect('/home');
       }else {
         console.log(decodedToken);
         next();
       }
     })
   }else {
-    res.redirect('/login');
+    res.redirect('/error');
   }
 
 }

@@ -3,6 +3,7 @@ const express = require("express"),
       filterController = require('../controller/filterController');
 
 
-router.get('/filter',filterController.filter_getAllDB);
+router.get('/movie',filterController.filter_movieAllDB);
+router.get('/tv',filterController.filter_serieAllDB);
 
 module.exports = router;

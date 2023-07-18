@@ -1,0 +1,30 @@
+
+
+
+
+</div>
+<div class="base content movies"> </div> 
+</section> 
+</div> 
+</main>
+
+<script>
+  var userNavigation = document.querySelectorAll('#user-navi a');
+  var url = window.location.pathname;
+
+  if (url === '/user/profile') {
+    var changePassButton = document.querySelector('[data-target="#changepass"]');
+    changePass = document.getElementById('changepass')
+    changePassButton.addEventListener('click', function() {
+      changePass.style.display = (changePass.style.display === 'block') ? 'none' : 'block';
+    });
+  }
+
+  userNavigation.forEach(function(navi) {
+    var url = window.location.pathname;
+    if (navi.getAttribute('href') === url) {
+      navi.classList.add('active');
+    }
+  });
+</script>
+<%- include('./footer.ejs') %>

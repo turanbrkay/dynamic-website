@@ -3,8 +3,10 @@ const express   = require("express"),
       indexRoutes = require("./routes/indexRoutes"),
       adminRoutes = require("./routes/adminRoutes"),
       filterRoutes = require("./routes/filterRoutes"),
+      userRoutes = require("./routes/userRoutes"),
       authenticationRoutes = require("./routes/authenticationRoutes"),
       {requireAuth,checkUser} = require('./middlewares/authMiddleware'),
+      errorHandler = require("./middlewares/errorMiddleware"),
       cookieParser = require('cookie-parser'),
       morgan = require('morgan'),
       mongoose = require('mongoose'),
@@ -32,6 +34,8 @@ app.use(indexRoutes);
 app.use('/admin',requireAuth,adminRoutes);
 app.use(filterRoutes);
 app.use(authenticationRoutes);
+app.use("/user",requireAuth,userRoutes);
+app.use(errorHandler);
 
 
 

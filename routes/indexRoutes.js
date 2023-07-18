@@ -27,9 +27,7 @@ router.get('/home',(req,res)=> {
         console.error(err);
         res.status(500).send('Internal Server Error');
         });
-        
 });
-
 
 
 router.get('/movie/:movieName',(req,res)=> {
@@ -43,8 +41,5 @@ router.get('/tv/:seriesName',(req,res)=> {
     res.render('player',{ movieInfo:movieInfo }) 
 });
 
-router.get('/error',(req,res)=> {
-    res.render('errorPage',{sortedMovieCards:sortedMovieCards}) 
-});
 
 module.exports = router; // router variable'ını dışarıdan kullanıma izin verdik

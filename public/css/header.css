@@ -281,7 +281,7 @@
 #head-search #show-search-btn {
   position: absolute;
   right: .2rem;
-  top: .2rem;
+  top: 0;
   color: #b6fff5;
   font-size: 2.2rem;
   line-height: 2.5rem;

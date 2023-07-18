@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs') %>
+
+<main>
+  <div class="container">
+    <div class="aside-wrap">
+      <div class="main-content">
+        <section>
+          <div class="top mb-3"> <div class="begin"> <h2>TV Shows</h2> </div> </div>
+          <%- include('filterForm.ejs') %>
+          <div class="clearfix"></div>
+          <div class="base content movies" id="filter-content">
+             <!-- CARDS -->
+             <% series.forEach((serie) => { %>
+              <%- include('../partials/movie-item.ejs', { cinema: serie }) %>
+              <% }) %>
+                     
+          </div>
+        </section>
+      </div>
+      <div class="sidebar">
+        <section>
+          <% function addHyphensBetweenWords(str) {
+            if (str.length > 1) {
+              return str.split(' ').join('-');
+            } else {
+              return str;
+            }
+          } %>
+          
+          <div class="top"> <div class="begin"> <h2>Suggestions</h2> </div> </div>
+          <div class="base mini in-sidebar movies">
+            <% series.slice(0, 10).forEach((serie) => { %>
+            <%- include('../partials/sidebar-item.ejs', { cinema: serie }) %>
+            <% }) %>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<style>
+  .header {
+    border-bottom: 1px solid #186d5d;
+  }
+</style>
+
+<%- include('../partials/footer.ejs') %>

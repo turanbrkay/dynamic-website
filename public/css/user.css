@@ -1,0 +1,92 @@
+.container.medium {
+  max-width: 1400px;
+}
+#user-navi {
+  display: flex;
+  margin: 1.5rem 0;
+  border-radius: .5rem;
+  border: 1px solid #186d5d;
+  overflow: hidden;
+}
+#user-navi a div {
+  display: flex;
+  align-items: center;
+}
+#user-navi a div span{
+  margin-right: .3rem;
+}
+#user-navi a div .material-icons {
+  font-size: 1.5rem;
+}
+#user-navi > a.active::before, #user-navi > a:hover::before {
+  width: 40%;
+  background: #b6fff5;
+}
+#user-navi > a::before {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  height: .15rem;
+  background: #208e79;
+  transition: width .2s,background-color .5s;
+}
+#user-navi > a.active {
+  background: #208e79;
+}
+.collapse:not(.show) {
+  display: none;
+}
+.profile-page button span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#user-navi > a.active, #user-navi > a:hover {
+  color: #b6fff5;
+}
+#user-navi > a {
+  width: 100%;
+  padding: 1rem 1rem .5rem;
+  transition: background-color .3s;
+  font-size: 1.3rem;
+  color: #848484;
+  white-space: nowrap;
+  display: inline-flex;
+  flex-direction: column;
+  background: #020202;
+  flex-shrink: 0;
+  width: 20%;
+}
+.profile-page {
+  max-width: 400px;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-control::placeholder {
+  color: #777;
+  opacity: 1;
+}
+.form-control-lg {
+  height: calc(1.5em + 1rem + 2px);
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .5rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #b6fff5;
+  background-color: #2a2a2a;
+  background-clip: padding-box;
+  border: 1px solid #161616;
+  border-radius: .5rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

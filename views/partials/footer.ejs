@@ -37,7 +37,14 @@
 </footer>
 
 </div>
-<!--<script src="/js/main.js"></script>-->
+<script>
+  var url = window.location.pathname;
+  var user = JSON.parse('<%- JSON.stringify(user) %>');
+  if (url !== '/home' && !user) {
+    var userIcon = document.querySelector('[data-target="#sign"]');
+    userIcon.style.display = 'none';
+  }
+</script>
 
 </body>
 

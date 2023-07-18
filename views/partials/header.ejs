@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/button.css">
     <link rel="stylesheet" href="/css/sign.css">
-
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/error.css">
    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
@@ -105,10 +106,10 @@
 
                       </ul>
                     </li>
-                    <li><a href="/filter">Movies</a></li>
-                    <li><a href="/filter">Tv Shows</a></li>
-                    <li><a href="/filter">Trending</a></li>
-                    <li><a href="/filter">Top IMDB</a></li>
+                    <li><a href="/movie">Movies</a></li>
+                    <li><a href="/tv">Tv Shows</a></li>
+                    <li><a href="/trending">Trending</a></li>
+                    <li><a href="/top-imdb">Top IMDB</a></li>
                   </ul>
                 </div>
               </div>
@@ -132,7 +133,8 @@
                 <div id="user-head">
                   <% if (user) { %>
                   <div class="dropdown user-notify"> 
-                    <button class="btn-header " data-toggle="dropdown" data-placeholder="false"> <i class="material-icons">&#xe7f4;</i> </button> 
+
+                    <a class="btn-header" href="/user/notification" data-toggle="dropdown" data-placeholder="false"> <i class="material-icons">&#xe7f4;</i> </a> 
                   </div>
                   <%}%>  
                   <div class="user dropdown">
@@ -141,12 +143,12 @@
                     </a>
                     <% if (user) { %>
                     <div class="dropdown-menu dropdown-menu-right" > 
-                      <a class="dropdown-item" href="user/profile"><i class="material-icons">&#xe7fd;</i> Profile</a> 
-                      <a class="dropdown-item" href="user/watching"><i class="material-icons">&#xe068;</i>Continue Watching</a> 
-                      <a class="dropdown-item" href="user/bookmark"><i class="material-icons">&#xe598;</i> Bookmark</a> 
-                      <a class="dropdown-item" href="user/notification"><i class="material-icons">&#xe7f4;</i> Notification</a> 
-                      <a class="dropdown-item" href="user/settings"><i class="material-icons">&#xe8b8;</i> Settings</a> 
-                      <a class="dropdown-item last" href="user/logout"><i class="material-icons">&#xe9ba;</i> Sign Out</a> 
+                      <a class="dropdown-item" href="/user/profile"><i class="material-icons">&#xe7fd;</i> Profile</a> 
+                      <a class="dropdown-item" href="/user/watching"><i class="material-icons">&#xe068;</i>Continue Watching</a> 
+                      <a class="dropdown-item" href="/user/bookmark"><i class="material-icons">&#xe598;</i> Bookmark</a> 
+                      <a class="dropdown-item" href="/user/notification"><i class="material-icons">&#xe7f4;</i> Notification</a> 
+                      <a class="dropdown-item" href="/user/settings"><i class="material-icons">&#xe8b8;</i> Settings</a> 
+                      <a class="dropdown-item last" href="/user/logout"><i class="material-icons">&#xe9ba;</i> Sign Out</a> 
                     </div>
                     <%}%>  
                   </div>
